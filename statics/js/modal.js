@@ -16,8 +16,8 @@ const model = {
 
         login: {
             //  Login form
-            username: {},
-            password: {},
+            username: "",
+            password: "",
         },
         // activities:['chorei', "logg", 'moodle']
 
@@ -89,7 +89,7 @@ const model = {
             }
             
         ],
-        arkiv: [
+        archive: [
             {
                 id: 1,
                 courseId: 100,
@@ -115,18 +115,16 @@ const model = {
                 // new Date() -> model.data.choreiarkiv[today].date
             },
         ],
-
-        // let newChorei = {
-        //     id: model.data.choreiarkiv.length + 1,
-        //     name: null,
-        //     video: null,
-        //     date: new Date().now()
-        // }
-        // model.data.choreiarkiv.push(newChorei)
-    },
-
-
-
-
-
-}
+        
+        addChoreiArchive(name, video) {
+            const newChorei= {
+                id: this.archive.length + 1,
+                name: name || null,
+                video: video || null,
+                date: new Date().toISOString().split('T')[0] // Automatically adds today's date
+            };
+            this.archive.push(newChorei);
+            }
+        }
+       
+    }
