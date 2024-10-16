@@ -1,10 +1,25 @@
-function loginHandler() {
+// Initiate the login controller
+function loginHandler(event) {
     /*
-    this function is responsible for collecting login data
-    from the form and verfifying  it agianst the stored data
+        This function is responsible for collecting login data 
+        from the form and verifying it against the stored user data.
     */
+    
+    // Prevents the page from reloading
+    event.preventDefault();
 
-    // collecting data from the form
-    const username = document.querySelector('input[name="username"]').value;
-    const password = document.querySelector('input[name="password"]').value;
+    // Collecting data from the form inputs in the model
+    const username = model.input.login.username;
+    const password = model.input.login.password;
+
+    // Verify user credentials
+    const user = model.data.users.find(u => u.username === username && u.password === password);
+
+    if (user) {
+        alert("Login successful!");
+        model.app.currentPage = 'index';  // Update the model's state to navigate to the main page
+        mainView();  // Render the appropriate view based on the new state
+    } else {
+        alert("Incorrect login credentials");
+    }
 }
