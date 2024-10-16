@@ -1,23 +1,16 @@
 //  Kaller funksjon view
 // skrive funksjon
 
-def registerView()
+function registerView()
 {
     html = `
-    
-    <form>
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="password" name="password" placeholder="Repeat Password">
-    <input type="submit" value="Register">
-    
-    </form>`;
-    // login page view
-        // create login
+            <form>
+                <input type="text" name="Name" placeholder="Jhon Doe">
+                <input type="password" name="password" placeholder="HammerFest1@!">
+                <input type="text" name="email" placeholder="e.g Jhondoe@gmail.com"> 
+            </form>
+            <button onclick="modal.app.currentpage = "login">register</button><button>Forgot Password</button>`;
 
-    // controller
-        // fetch login form
-        // Compile login form with modal data
-            // if true
-                // modal.app.currentpage = "newpage"
+    document.getElementById("app").innerHTML = html;
+
 }
