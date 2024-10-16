@@ -17,5 +17,22 @@ let loginController= {
 };
 
 let registerController= {
-    
-}
+    handleRegister() {
+        const name = document.getElementById('name').value;
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const email = document.getElementById('email').value;
+
+        model.users.push({
+            id: model.data.users.lenght + 1,
+            username: username,
+            password: password,
+            email: email,
+            isTeacher: false,
+        });
+        alert("registration successful");
+        model.app.currentPage = 'login';
+        mainView(); // redirect to login after registration
+    }
+};
+mainView();
