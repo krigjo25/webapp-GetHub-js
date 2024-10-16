@@ -1,10 +1,9 @@
 //  Kaller funksjon view
 // skrive funksjon
 
-updateView();
-
-def updateView()
+def registerView()
 {
+    html = ``;
     // login page view
         // create login
 

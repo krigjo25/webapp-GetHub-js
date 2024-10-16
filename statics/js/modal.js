@@ -36,16 +36,16 @@ const model = {
 
     data:{
         //  Database tabell
-        // user: [{
-        //     id: 1,
-        //     teacher: 1001
-        //     username: "kompis",
-        //     password: 1234,
-        //     courses: [100,200,300],
-        //     feedbacks: [{teacher:null, name:"", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}]
-        //     log: [{time:'2020-12-12', brukerlog:""}]
+        user: [{
+            id: 1,
+            //teacher: 1001
+            username: "kompis",
+            password: 1234,
+            courses: [100,200,300],
+            feedbacks: [{teacher:null, name:"", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}]
+            log: [{time:'2020-12-12', brukerlog:""}]
          
-        // }]
+        }],
         users: [
             {
                 id: 1,
