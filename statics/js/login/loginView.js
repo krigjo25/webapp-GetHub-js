@@ -14,22 +14,22 @@ const loginView = {
         });
     },
 
-    renderRegister() {
-        document.getElementById('app').innerHTML = `
-            <h2>Register</h2>
-            <form id="registerForm">
-                <input type="text" id="name" placeholder="Full Name">
-                <input type="text" id="username" placeholder="Username">
-                <input type="password" id="password" placeholder="Password">
-                <input type="email" id="email" placeholder="Email">
-                <button type="submit">Register</button>
-            </form>
-        `;
-        document.getElementById('registerForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            registerController.handleRegister();
-        });
-    },
+   // renderRegister() {
+   //     document.getElementById('app').innerHTML = `
+   //         <h2>Register</h2>
+   //         <form id="registerForm">
+   //             <input type="text" id="name" placeholder="Full Name">
+   //             <input type="text" id="username" placeholder="Username">
+   //             <input type="password" id="password" placeholder="Password">
+   //             <input type="email" id="email" placeholder="Email">
+    //            <button type="submit">Register</button>
+   //         </form>
+   //     `;
+   //     document.getElementById('registerForm').addEventListener('submit', function(event) {
+   //         event.preventDefault();
+   //         registerController.handleRegister();
+   //     });
+   // },
 
     renderMain() {
         document.getElementById('app').innerHTML = `
@@ -43,8 +43,8 @@ const loginView = {
 function mainView() {
     if (model.app.currentPage === 'login') {
         loginView.renderLogin();
-    } else if (model.app.currentPage === 'register') {
-        loginView.renderRegister();
+   // } else if (model.app.currentPage === 'register') {
+   //     loginView.renderRegister();
     } else if (model.app.currentPage === 'index') {
         loginView.renderMain();
     }
