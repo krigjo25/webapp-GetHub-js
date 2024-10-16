@@ -7,7 +7,7 @@ displayLogs() {
   View.renderLogs(logs);
 },
 addlog() {
-  const newLog = view.getinput();
+  const newLog = view.getInput();
   if (newLog) {
     Model.saveLog(newLog);
     View.clearInput();
