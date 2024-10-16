@@ -24,17 +24,25 @@
     <script>
 
         // Ensure that currentpage is set
-        if (modal.currentpage == 'index')
-        {
-            mainView();
-        }
-        else if (modal.currentpage == 'login')
-        {
-            loginView();
-        }
-        else if (modal.currentpage == 'register')
+        if (modal.currentpage == 'register')
         {
             registerView();
+        }
+        else if (modal.currentpage == 'dashboard')
+        {
+            dashboardView();
+        }
+        else if (modal.currentpage == 'log')
+        {
+            logView();
+        }
+        else if (modal.currentpage == 'chorei')
+        {
+            choreiView();
+        }
+        else
+        {
+            loginView();
         }
             
     </script>

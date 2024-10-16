@@ -3,14 +3,14 @@
 
 updateView();
 
-def updateView()
+function dashboardView()
 {
-    // login page view
-        // create login
+    // header
 
-    // controller
-        // fetch login form
-        // Compile login form with modal data
-            // if true
-                // modal.app.currentpage = "newpage"
+    // moduls
+
+    // milistone
+
+    // comments
+
 }

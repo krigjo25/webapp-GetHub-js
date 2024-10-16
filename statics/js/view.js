@@ -1,16 +1,17 @@
 //  Kaller funksjon view
 // skrive funksjon
 
-updateView();
-
-def updateView()
+function navigationMenu()
 {
-    // login page view
-        // create login
+    // Webbapplication navigation menu
 
-    // controller
-        // fetch login form
-        // Compile login form with modal data
-            // if true
-                // modal.app.currentpage = "newpage"
+    html = /*HTML*/`
+    
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#register">moodle</a></li>
+            <li><a href="#login">Annet boss</a></li>
+            <li><a href="#chorei">Chorei</a></li>
+        </ul>`;
 }

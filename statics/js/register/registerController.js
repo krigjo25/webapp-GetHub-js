@@ -27,5 +27,5 @@ function pushObject(event)
     modal.app.currentpage = 'login';
 
     //  update page 
-    return mainView();
+    mainView();
 }
