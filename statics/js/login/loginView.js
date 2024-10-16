@@ -34,7 +34,7 @@ const loginView = {
     renderMain() {
         document.getElementById('app').innerHTML = `
             <h2>Welcome</h2>
-            <p>This is the main page of the application.</p>
+            <p>app.</p>
         `;
     },
 };
