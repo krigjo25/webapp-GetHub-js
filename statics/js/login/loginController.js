@@ -22,5 +22,4 @@ function loginHandler(event) {
     } else {
         alert("Incorrect login credentials");
     }
-    return;
 }
