@@ -29,9 +29,10 @@
         updateView();
         function updateView()
         {
-            // Ensure that currentpage is set
+            // Initialize the model
             let page = model.app.currentpage;
 
+            // Ensure that currentpage is set
             if (page == 'register')
             {
                 registerView();
