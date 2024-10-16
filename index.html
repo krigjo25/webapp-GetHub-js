@@ -2,51 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-OK-Compatible" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>webApp</title>
-    <script src="modal.js" defer></script>
-    <script src="controller.js" defer></script>
-    <script src="view.js" defer></script>
-    <script src="choreiController.js" defer></script>
-    <script src="choreiView.js" defer></script>
-    <script src="loginController.js" defer></script>
-    <script src="loginView.js" defer></script>
-    <script src="registerController.js" defer></script>
-    <script src="registerView.js" defer></script>
-    <script src="dashboardController.js" defer></script>
-    <script src="dashboardView.js" defer></script>
-    <script src="logController.js" defer></script>
-    <script src="logView.js" defer></script>
+    <script src="statics/js/modal.js" ></script>
+    <script src="statics/js/controller.js" defer></script>
+    <script src="statics/js/view.js" defer></script>
+    <script src="statics/js/chorei/choreiController.js" defer></script>
+    <script src="statics/js/chorei/choreiView.js" defer></script>
+    <script src="statics/js/login/loginController.js" defer></script>
+    <script src="statics/js/login/loginView.js" defer></script>
+    <script src="statics/js/register/registerController.js" defer></script>
+    <script src="statics/js/register/registerView.js" defer></script>
+    <script src="statics/js/dashboard/dashboardController.js" defer></script>
+    <script src="statics/js/dashboard/dashboardView.js" defer></script>
+    <script src="statics/js/log/logController.js" defer></script>
+    <script src="statics/js/log/logView.js" defer></script>
 
 </head>
 <body>
     <div id="app"></div>
     <script>
 
-        // Ensure that currentpage is set
-        if (modal.currentpage == 'register')
+        updateView();
+        function updateView()
         {
-            registerView();
-        }
-        else if (modal.currentpage == 'dashboard')
-        {
-            dashboardView();
-        }
-        else if (modal.currentpage == 'log')
-        {
-            logView();
-        }
-        else if (modal.currentpage == 'chorei')
-        {
-            choreiView();
-        }
-        else
-        {
-            loginView();
+            // Ensure that currentpage is set
+            let page = model.app.currentpage;
+
+            if (page == 'register')
+            {
+                registerView();
+            }
+            
+            else if (page == 'dashboard')
+            {
+                dashboardView();
+            }
+            else if (page == 'log')
+            {
+                logView();
+            }
+            else if (page == 'chorei')
+            {
+                choreiView();
+            }
+            else
+            {
+                loginView();
+            }
         }
             
     </script>
-    
-
 </body>
 </html>
