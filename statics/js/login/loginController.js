@@ -17,9 +17,11 @@ function loginHandler(event) {
 
     if (user) {
         alert("Login successful!");
-        model.app.currentPage = 'dashboard';  // Update the model's state to navigate to the main page
-        mainView();  // Render the appropriate view based on the new state
+        model.app.currentpage = 'dashboard';  // Update the model's state to navigate to the main page
+        console.log(model.app.currentPage);
+        updateView();  // Render the appropriate view based on the new state
     } else {
         alert("Incorrect login credentials");
     }
+    return;
 }
