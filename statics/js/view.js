@@ -14,4 +14,7 @@ function navigationMenu()
             <li><a href="#login">Annet boss</a></li>
             <li><a href="#chorei">Chorei</a></li>
         </ul>`;
+
+
+    return html;
 }
