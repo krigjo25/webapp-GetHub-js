@@ -11,6 +11,20 @@
 <body>
     <div id="app"></div>
     <script>
+
+        if (modal.currentpage == 'index')
+    {
+        mainView();
+    }
+    else if (modal.currentpage == 'login')
+    {
+        loginView();
+    }
+    else if (modal.currentpage == 'register')
+    {
+        registerView();
+    }
+
         //  If current page == index
             //  Show index
         //  else if current page == login
