@@ -9,11 +9,11 @@ function loginHandler(event) {
     event.preventDefault();
 
     // Collecting data from the form inputs in the model
-    const username = model.input.login.username;
-    const password = model.input.login.password;
+    let username = model.input.login.username;
+    let password = model.input.login.password;
 
     // Verify user credentials
-    const user = model.data.users.find(u => u.username === username && u.password === password);
+    let user = model.data.users.find(u => u.username === username && u.password === password);
 
     if (user) {
         alert("Login successful!");
