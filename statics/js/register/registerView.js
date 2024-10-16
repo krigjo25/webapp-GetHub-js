@@ -10,7 +10,7 @@ function registerView()
                 <input type="password" name="password" placeholder="HammerFest1@!">
                 <input type="text" name="email" placeholder="e.g Jhondoe@gmail.com"> 
             </form>
-            <button onclick="pushObject()>register</button>`;
+            <button onclick="pushObject()">register</button>`;
 
     return document.getElementById('app').innerHTML = html;
 
