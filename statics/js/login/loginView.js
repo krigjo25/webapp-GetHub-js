@@ -14,5 +14,5 @@ function loginView() {
 
 function navigateToRegister() {
     model.app.currentPage = "register";
-    mainview();
+    updateView();
 }
