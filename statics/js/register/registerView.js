@@ -3,14 +3,16 @@
 
 function registerView()
 {
-    html = `
+    html = /*HTML*/`
+            <h1>Register</h1>
             <form>
-                <input type="text" name="Name" placeholder="Jhon Doe">
+                <input type="text" name="Name" oninput'placeholder="Jhon Doe">
                 <input type="password" name="password" placeholder="HammerFest1@!">
                 <input type="text" name="email" placeholder="e.g Jhondoe@gmail.com"> 
             </form>
-            <button onclick="modal.app.currentpage = "login">register</button><button>Forgot Password</button>`;
+            <button onclick="pushObject()>register</button>`;
 
-    document.getElementById("app").innerHTML = html;
+    return document.getElementById('app').innerHTML = html;
+
 
 }
