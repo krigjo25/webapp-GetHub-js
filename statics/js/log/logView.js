@@ -12,5 +12,5 @@ getInput() {
  clearInput() {
      document.getElementById(`logInput`).value = ``;}
     
-    update view();
+    updateView();
      
