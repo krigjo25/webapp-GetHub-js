@@ -3,7 +3,15 @@
 
 def registerView()
 {
-    html = ``;
+    html = `
+    
+    <form>
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="password" name="password" placeholder="Repeat Password">
+    <input type="submit" value="Register">
+    
+    </form>`;
     // login page view
         // create login
 
