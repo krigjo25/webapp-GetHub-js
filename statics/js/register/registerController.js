@@ -1,11 +1,15 @@
 // Initiate the controller
-function pushObject() 
+function pushObject(event) 
 
 {
+    
     /*
         This function is responsible for collecting data from the form 
         and pushing it up to the server.
     */
+   //  Prevents the page from reloading
+    event.preventDefault();
+
    //   Initializing an object
    let person = {};
     
