@@ -13,7 +13,7 @@ function loginHandler(event) {
     let password = model.input.login.password;
 
     // Verify user credentials
-    let user = model.data.users.find(u => u.username === username && u.password === password);
+    let user = model.data.users.find(u => u.username == username && u.password == password);
 
     if (user) {
         alert("Login successful!");
