@@ -1,16 +1,16 @@
-//  Kaller funksjon view
-// skrive funksjon
-
-updateView();
-
-def updateView()
-{
-    // login page view
-        // create login
-
-    // controller
-        // fetch login form
-        // Compile login form with modal data
-            // if true
-                // modal.app.currentpage = "newpage"
-}
+renderLogs(logs){
+const loglist = document.getElementByid(`logList`);
+logList.innerHTML = ``;
+logs.forEach(log => {
+  const li = document.createElement(`li`);
+  li.textContent = log;
+  logList.appendChild(li);
+});
+getInput() {
+    return document.getElementById(`logInput`).value.trim();
+},
+ clearInput() {
+     document.getElementById(`logInput`).value = ``;}
+    
+    update view();
+     
