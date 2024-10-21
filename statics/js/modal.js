@@ -45,6 +45,8 @@ const model = {
                 password: 1234,
                 courses: [100,200,300],
                 feedbacks: [{teacher:null, name:"", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}],
+                
+                //  Daglig logview
                 log: [{time:'2020-12-12', nklog:"", teamlog:"", moodlog:"", codelog:""}]
             },
         ], //?  model.data.users[id].log[filterResult]
