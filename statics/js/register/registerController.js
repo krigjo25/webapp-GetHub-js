@@ -1,31 +1,32 @@
 // Initiate the controller
-function pushObject(event) 
-
-{
-    
-    /*
-        This function is responsible for collecting data from the form 
-        and pushing it up to the server.
-    */
-   //  Prevents the page from reloading
+function pushObject(event) {
+    // Prevent page reload
     event.preventDefault();
-
-   //   Initializing an object
-   let person = {};
     
-    //  Collecting data from the form
-    person.id = modal.users.length + 1;
-    person.name = modal.inputs.registration.name;
-    person.email = modal.inputs.registration.email;
-    person.username = modal.inputs.registration.username;
-    person.password = modal.inputs.registration.password;
+    // Create a new user object from the input fields
+    let person = {
+        id: model.data.users.length + 1,
+        name: model.input.registration.name,
+        email: model.input.registration.email,
+        username: model.input.registration.username,
+        password: model.input.registration.password,
+        courses: [], // Assign default values if needed
+        feedbacks: [],
+        log: []
+    };
     
-    //  Push object up to the server
-    modal.user.push(person);
-
-    //  Update the page
-    modal.app.currentpage = 'login';
-
-    //  update page 
+    // Push the new user into the users array
+    model.data.users.push(person);
+    
+    // Reset the registration input fields
+    model.input.registration.name = "";
+    model.input.registration.email = "";
+    model.input.registration.username = "";
+    model.input.registration.password = "";
+    
+    // Redirect to login page
+    model.app.currentpage = 'login';
+    
+    // Update the view
     updateView();
 }
