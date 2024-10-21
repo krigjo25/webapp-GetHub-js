@@ -1,5 +1,5 @@
 renderLogs(logs){
-const loglist = document.getElementByid(`logList`);
+const loglist = document.getElementById(`logList`);
 logList.innerHTML = ``;
 logs.forEach(log => {
   const li = document.createElement(`li`);
