@@ -5,57 +5,53 @@
     <meta http-equiv="X-OK-Compatible" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>webApp</title>
-    <script src="statics/js/modal.js" ></script>
-    <script src="statics/js/view.js" ></script>
+
+    <!-- Model Initialization (First) -->
+    <script src="statics/js/modal.js"></script>
+
+    <!-- Views (Next, before controllers) -->
+    <script src="statics/js/view.js"></script>
     <script src="statics/js/log/logView.js"></script>
     <script src="statics/js/login/loginView.js"></script>
     <script src="statics/js/register/registerView.js"></script>
     <script src="statics/js/dashboard/dashboardView.js"></script>
-    <script src="statics/js/controller.js" ></script>
-    
-    <script src="statics/js/login/loginController.js" ></script>
-    <script src="statics/js/chorei/choreiController.js" ></script>
-    <script src="statics/js/register/registerController.js" ></script>
-    <script src="statics/js/dashboard/dashboardController.js"></script>
-    
-    <script src="statics/js/log/logController.js"></script>
-    
+    <script src="statics/js/chorei/choreiView.js"></script> 
 
+    <!-- Controllers (After views) -->
+    <script src="statics/js/controller.js"></script>
+    <script src="statics/js/login/loginController.js"></script>
+    <script src="statics/js/chorei/choreiController.js"></script>
+    <script src="statics/js/register/registerController.js"></script>
+    <script src="statics/js/dashboard/dashboardController.js"></script>
+    <script src="statics/js/log/logController.js"></script>
 </head>
 <body>
     <div id="app"></div>
     <script>
-
         updateView();
-        function updateView()
-        {
-            // Initialize the model
-            let page = model.app.currentpage;
 
-            // Ensure that currentpage is set
-            if (page == 'register')
-            {
+        function updateView() {
+            console.log('Updating view...');
+            let page = model.app.currentpage;
+            console.log('Current page:', page);
+
+            if (page === 'register') {
+                console.log('Navigating to register view');
                 registerView();
-            }
-            
-            else if (page == 'dashboard')
-            {
+            } else if (page === 'dashboard') {
+                console.log('Navigating to dashboard view');
                 dashboardView();
-            }
-            else if (page == 'log')
-            {
+            } else if (page === 'log') {
+                console.log('Navigating to log view');
                 logView();
-            }
-            else if (page == 'chorei')
-            {
-                choreiView();
-            }
-            else
-            {
+            } else if (page === 'chorei') {
+                console.log('Navigating to chorei view');
+                choreiView(); 
+            } else {
+                console.log('Navigating to login view');
                 loginView();
             }
         }
-            
     </script>
 </body>
 </html>
