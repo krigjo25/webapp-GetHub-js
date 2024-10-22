@@ -1,7 +1,7 @@
 const model = {
     app:{
         // Dash board 
-        currentpage:'login',
+        currentpage:'log',
     },
 
     input:{
@@ -35,17 +35,6 @@ const model = {
     },
 
     data:{
-        //  Database tabell
-        user: [{
-            id: 1,
-            //teacher: 1001
-            username: "kompis",
-            password: 1234,
-            courses: [100,200,300],
-            feedbacks: [{teacher:null, name:"", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}],
-            log: [{time:'2020-12-12', brukerlog:""}]
-         
-        }],
         users: [
             {
                 id: 1,
@@ -56,18 +45,9 @@ const model = {
                 password: 1234,
                 courses: [100,200,300],
                 feedbacks: [{teacher:null, name:"", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}],
-                log: [{time:'2020-12-12', brukerlog:"random text"}]
-            },
-            {
-                id: 1001,
-                teacher: 6969,
-                isTeacher: true,
-                assigned: [1],
-                username: "Teacher",
-                password: 12345,
-                courses: [100,200,300], // teacher tilgang til alle courses
-                feedbacks: [],
-                log: []
+                
+                //  Daglig logview
+                log: [{time:'2020-12-12', nklog:"", teamlog:"", moodlog:"", codelog:""}]
             },
         ], //?  model.data.users[id].log[filterResult]
 
