@@ -21,9 +21,9 @@ function dashmain()
         //  Creating an HTML
         html += /*HTML*/`
             <div> 
-            <img src="${course.img}">
-                <h3>${course.name}</h3>
-                <p>${course.description}</h3>
+            <img src="${course[i].img}">
+                <h3>${course[i].name}</h3>
+                <p>${course[i].description}</h3>
             </div>`;
     }
 
