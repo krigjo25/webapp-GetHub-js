@@ -1,7 +1,7 @@
 const model = {
     app:{
         // Dash board 
-        currentpage:'loggin',
+        currentpage:'dashboard',
     },
 
     input:{
@@ -47,28 +47,38 @@ const model = {
                 feedbacks: [{teacher:null, name:"", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}],
                 
                 //  Daglig logview
-                log: [{time:'2020-12-12', nklog:"", teamlog:"", moodlog:"", codelog:""}]
+                log: [
+                    {
+                        time:'2020-12-12', 
+                        nklog:"", 
+                        teamlog:"", 
+                        moodlog:"", 
+                        codelog:""}]
             },
         ], //?  model.data.users[id].log[filterResult]
 
         courses: [
+            //  Kurs beskrivelse
             {
                 courseId: 100,
-                namecourse:"chorei",
+                img:"path/to/file.jpg",
+                name:"chorei",
                 description:"NøkkelKompetanse, skriv log, se gamle chorei og relaterte oppgaver"
-                // hva er kurset, hva kan du gjøre på kurset
+
             },
             {
                 courseId: 200,
+                img:"path/to/file.jpg",
                 namecourse:"Moodle",
                 description:"Relaterte oppgaver"
-                // hva er kurset, hva kan du gjøre på kurset
+
             },
             {
                 courseId: 300,
-                namecourse:"Scrum-log",
+                img:"path/to/file.jpg",
+                name:"Scrum-log",
                 description:'Se hva du har lært, og jobbet med tidligere'
-                // hva er kurset, hva kan du gjøre på kurset
+
             }
             
         ],
