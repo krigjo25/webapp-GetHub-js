@@ -4,16 +4,22 @@ function navigateToLogView(view) {
   updateView();
 }
 
-function saveLogNote() {
-  console.log('Saving log note...');
-  const logNote = document.getElementById('logNote').value;
+function saveLogEntry() {
+  console.log('Saving log entry...');
+  const nkLog = document.getElementById('nkLog').value;
+  const teamLog = document.getElementById('teamLog').value;
+  const moodLog = document.getElementById('moodLog').value;
+  const codeLog = document.getElementById('codeLog').value;
   
-  // Save to the model's log
+  // Save the log entry to the model
   const newLogEntry = {
       time: new Date().toISOString().split('T')[0], // Saves the date in YYYY-MM-DD format
-      brukerlog: logNote
+      nklog: nkLog,
+      teamlog: teamLog,
+      moodlog: moodLog,
+      codelog: codeLog
   };
-  model.data.log.push(newLogEntry);
+  model.data.users[0].log.push(newLogEntry); // Assuming user 0 is the logged-in user
   
   // Confirm the action
   alert('Dagens logg notat er lagret!');
