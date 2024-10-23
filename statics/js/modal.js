@@ -61,22 +61,22 @@ const model = {
             //  Kurs beskrivelse
             {
                 courseId: 100,
-                img:"path/to/file.jpg",
                 name:"chorei",
+                img:"path/to/file.jpg",
                 description:"NøkkelKompetanse, skriv log, se gamle chorei og relaterte oppgaver"
 
             },
             {
                 courseId: 200,
+                name:"Moodle",
                 img:"path/to/file.jpg",
-                namecourse:"Moodle",
                 description:"Relaterte oppgaver"
 
             },
             {
                 courseId: 300,
-                img:"path/to/file.jpg",
                 name:"Scrum-log",
+                img:"path/to/file.jpg",
                 description:'Se hva du har lært, og jobbet med tidligere'
 
             }
