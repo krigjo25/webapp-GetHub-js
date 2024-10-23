@@ -67,15 +67,36 @@ const model = {
 
             },
             {
-                courseId: 200,
+                courseId: 110,
                 name:"Moodle",
                 img:"path/to/file.jpg",
                 description:"Relaterte oppgaver"
 
             },
             {
-                courseId: 300,
+                courseId: 120,
                 name:"Scrum-log",
+                img:"path/to/file.jpg",
+                description:'Se hva du har lært, og jobbet med tidligere'
+
+            },
+            {
+                courseId: 130,
+                name:"Emne 1",
+                img:"path/to/file.jpg",
+                description:'Se hva du har lært, og jobbet med tidligere'
+
+            },
+            {
+                courseId: 140,
+                name:"Emne 2",
+                img:"path/to/file.jpg",
+                description:'Se hva du har lært, og jobbet med tidligere'
+
+            },
+            {
+                courseId: 150,
+                name:"Emne 3",
                 img:"path/to/file.jpg",
                 description:'Se hva du har lært, og jobbet med tidligere'
 

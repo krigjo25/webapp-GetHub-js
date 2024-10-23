@@ -5,7 +5,10 @@ function dashboardView()
     html = /*HTML*/`
         <h1>Dashboard</h1>
         ${navigationMenu()}
-        ${dashmain()}`;
+        ${dashmain()}
+        
+        ${milestone()}
+        ${feedback()}`;
         
         document.getElementById('app').innerHTML = html;
 }
@@ -28,4 +31,13 @@ function dashmain()
     }
 
     return html
+}
+function milestone()
+{
+
+}
+
+function feedback()
+{
+    
 }
