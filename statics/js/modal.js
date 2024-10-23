@@ -55,16 +55,19 @@ const model = {
             {
                 courseId: 100,
                 namecourse:"chorei",
+                description:"NøkkelKompetanse, skriv log, se gamle chorei og relaterte oppgaver"
                 // hva er kurset, hva kan du gjøre på kurset
             },
             {
                 courseId: 200,
-                namecourse:"nøkkelkompetanse",
+                namecourse:"Moodle",
+                description:"Relaterte oppgaver"
                 // hva er kurset, hva kan du gjøre på kurset
             },
             {
                 courseId: 300,
-                namecourse:"chorei",
+                namecourse:"Scrum-log",
+                description:'Se hva du har lært, og jobbet med tidligere'
                 // hva er kurset, hva kan du gjøre på kurset
             }
             
