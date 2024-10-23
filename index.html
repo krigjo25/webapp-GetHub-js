@@ -29,11 +29,11 @@
     <div id="app"></div>
     <script>
         updateView();
-
         function updateView() {
+
             console.log('Updating view...');
             let page = model.app.currentpage;
-            console.log('Current page:', page);
+            console.log('Current page:', page, counter);
 
             if (page === 'register') {
                 console.log('Navigating to register view');
@@ -43,11 +43,10 @@
                 dashboardView();
             } else if (page === 'log') {
                 console.log('Navigating to log view');
-            }
-            else if (page === 'log')
-            {
+
                 //Egen definert funksjon
                 logView();
+
             } else if (page === 'chorei') {
                 console.log('Navigating to chorei view');
                 choreiView(); 
