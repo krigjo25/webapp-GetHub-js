@@ -8,13 +8,12 @@ function navigationMenu()
     html = /*HTML*/`
     
     <nav>
-        <ul>
-            <li><a href="#dashboard">Dashboard</a></li>
-            <li><a href="https://getacademy.no/">moodle</a></li>
-            <li><a href="#login">Annet boss</a></li>
-            <li><a href="#chorei">Chorei</a></li>
-            <li><a href='#log'>log</a></li>
-        </ul>`;
+    <div>
+        <button onclick="navigateToChoreiView('chorei')">Chorei</button>
+        <button onclick="navigateToChoreiView('logg')">Logg</button>
+        <button onclick="navigateToChoreiView('moodle')">Moodle</button>
+        <button onclick="navigateToChoreiView('annet')">Annet</button>
+    </div>`;
 
 
     return html;

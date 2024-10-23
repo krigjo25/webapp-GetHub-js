@@ -6,10 +6,12 @@ function dashboardView()
         <h1>Dashboard</h1>
         ${navigationMenu()}
         ${dashmain()}
-        
-        ${milestone()}
-        ${feedback()}`;
-        
+
+        <!--Milestone -->
+        ${milestoneView()}
+
+        ${feedbackView()}`;
+
         document.getElementById('app').innerHTML = html;
 }
 
@@ -32,12 +34,25 @@ function dashmain()
 
     return html
 }
-function milestone()
+
+function milestoneView()
 {
 
+    let html = /*HTML*/ `
+        <div>
+            <div>
+            </div>
+        </div>`;
+    return html;
 }
-
-function feedback()
+function feedbackView()
 {
-    
+    let html = /*HTML*/`
+        <div>
+            <img>
+            <div> label</div>
+            <div> feedback</div>
+        </div>`;
+
+    return html;
 }
