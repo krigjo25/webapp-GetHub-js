@@ -2,7 +2,7 @@
 // skrive funksjon
 
 function registerView() {
-    html = /*HTML*/`
+    let html = /*HTML*/`
         <h1>Register</h1>
         <form onsubmit='pushObject(event)'>
             <input type="text" name="Name" placeholder="e.g John Doe" oninput='model.input.registration.name = this.value'>
@@ -11,5 +11,6 @@ function registerView() {
             <input type="text" name="email" placeholder="e.g johndoe@gmail.com" oninput='model.input.registration.email = this.value'> 
             <input type="submit" value="Register">
         </form>`;
-    return document.getElementById('app').innerHTML = html;
+
+        document.getElementById('app').innerHTML = html;
 }
