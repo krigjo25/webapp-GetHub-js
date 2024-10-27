@@ -5,6 +5,10 @@ const model = {
     },
 
     input:{
+        search: {
+            text: "",
+        },
+        
         registration: {
 
             //  Registration form
