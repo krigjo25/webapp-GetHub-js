@@ -1,17 +1,20 @@
-updateView()
-    function updateView(){
-        document.getElementById("app").innerHTML = /*HTML*/`
+updatesearchView()
+    function updatesearchView(){
+        let html = /*HTML*/`
 
-        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+        <h3>Søk</h3>
+        <input
+        type ="text"
+        oninput = "model.input.search.text = this.value"
+        value = "${model.input.search.text}"/>
+        <button>Søk</button>
+        ` ;
 
-<ul id="myMenu">
-  <li><a href="#">About</a></li>
-  <li><a href="#">Chorie</a></li>
-  <li><a href="#">Log</a></li>
-  <li><a href="#">Tools</a></li>
-  
-</ul>
+
         
+
+     
+
         
-        `
+     return html;
     }
