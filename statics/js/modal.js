@@ -54,11 +54,12 @@ const model = {
                 //milestone: model.data.users[0].assignments / modal.data.courses[0].assignments,
                 log: [ // StudentlogView
                     {
-                        time:'2020-12-12', 
-                        nklog:"", 
-                        teamlog:"", 
-                        moodlog:"", 
-                        codelog:""}]
+                        time:'2020-12-12',
+                        title:"UKE 1 - Emne 1 - Mandag", 
+                        nklog:"Chorei - Nøkkelkompetanse", 
+                        teamlog:"Gruppen har vært fantastisk idag 100% oppmøte også videre", 
+                        moodlog:"sove dårlig i natt kake guri over hode", 
+                        codelog:"lærte å kode i dag med javascript",}]
             },
         ], //?  model.data.users[id].log[filterResult]
 
