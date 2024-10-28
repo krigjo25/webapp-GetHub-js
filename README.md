@@ -33,9 +33,8 @@ If the user does not have an account i want to create an account.
 
 ####    Accepted Criteria
 
-- The user fills out necessary details and confirms the login
+- The user fills out necessary details and confirms the login credentials
 - Navigate to dashboard
-- 
 
 ### Register ✔
 
