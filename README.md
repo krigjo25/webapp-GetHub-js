@@ -7,7 +7,7 @@
 ## User stories
 
 ### Chorei
-As a user i want to view the today's lecture, from Chorei.
+As a user i want to view the previous lectures, from Chorei.
 As a user i'd like to retrieve any usefull links regarding this week's subject, 
 As a user I want to write an reflective student log based on 4 questions addition to adding a title which I can go back on later.
 
