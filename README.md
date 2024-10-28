@@ -6,7 +6,7 @@
 
 ## User stories
 
-### Chorei
+### Chorei ✔
 As a user i want to view the previous lectures, from Chorei.
 As a user i'd like to retrieve any usefull links regarding this week's subject, 
 As a user I want to write an reflective student log based on 4 questions addition to adding a title which I can go back on later.
@@ -23,11 +23,11 @@ As a user I want to write an reflective student log based on 4 questions additio
 -   Today's Chorei reflection
 -   Today's Team Collabration 
 
-### Dashboard
+### Dashboard 
 
 ####    Accepted Criteria
 
-### Login
+### Login ✔
 As a user i want to be able to login, to hide my private logs, and the private milestone etc.
 If the user does not have an account i want to create an account.
 
@@ -37,7 +37,7 @@ If the user does not have an account i want to create an account.
 - Navigate to dashboard
 - 
 
-### Register
+### Register ✔
 
 As a guest i want to be able to create a new account, so i can write a new log entry, accsess information which is only viewable for members
 
@@ -48,9 +48,12 @@ As a guest i want to be able to create a new account, so i can write a new log e
 
 ### Log / Search
 As a user I want to view my student logs which was writen in Chorei page. 
+
 As a user I want to be able to search after a specific log, by date / choosen title
 
 As a developer i want to fetch the written log which was written in Chorei, into this page.
+
+I want to call Search function from logView
 
 ####    Accepted Criteria
 -   The user can filter the logs by date / title in logView
