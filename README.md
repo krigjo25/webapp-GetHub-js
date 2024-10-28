@@ -57,4 +57,5 @@ I want to call Search function from logView
 
 ####    Accepted Criteria
 -   The user can filter the logs by date / title in logView
+
 -   The user can view all written logs from ChoreiPage 
