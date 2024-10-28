@@ -1,7 +1,7 @@
 const model = {
     app:{
         // Dash board 
-        currentpage:'dashboard',
+        currentpage:'journal',
     },
 
     input:{
@@ -48,16 +48,16 @@ const model = {
                 username: "kompis",
                 password: 1234,
                 courses: [100,200,300],
-                feedbacks: [{teacher:null, name:"", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}],
-                
-                //  Daglig logview
-                log: [
+                feedbacks: [
+                    {teacher:1001, name:"Jhon Doe", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}],
+                log: [ // StudentlogView
                     {
-                        time:'2020-12-12', 
-                        nklog:"", 
-                        teamlog:"", 
-                        moodlog:"", 
-                        codelog:""}]
+                        time:'2020-12-12',
+                        title:"UKE 1 - Emne 1 - Mandag", 
+                        nklog:"Chorei - Nøkkelkompetanse", 
+                        teamlog:"Gruppen har vært fantastisk idag 100% oppmøte også videre", 
+                        moodlog:"sove dårlig i natt kake guri over hode", 
+                        codelog:"lærte å kode i dag med javascript",}]
             },
         ], //?  model.data.users[id].log[filterResult]
 
@@ -66,45 +66,51 @@ const model = {
             {
                 courseId: 100,
                 name:"chorei",
-                img:"path/to/file.jpg",
-                description:"NøkkelKompetanse, skriv log, se gamle chorei og relaterte oppgaver"
-
+                img:"statics/img/chorei.png",
+                alt:"Chorei",
+                description:"NøkkelKompetanse, skriv log, se gamle chorei og relaterte oppgaver",
+                assignments: 100,
             },
             {
                 courseId: 110,
                 name:"Moodle",
-                img:"path/to/file.jpg",
+                img:"statics/img/moodle.png",
+                alt:"Moodle",
                 description:"Relaterte oppgaver"
 
             },
             {
                 courseId: 120,
-                name:"Scrum-log",
-                img:"path/to/file.jpg",
+                name:"Student-journal",
+                img:"statics/img/student-log.png",
+                alt:"Student-journal",
                 description:'Se hva du har lært, og jobbet med tidligere'
 
             },
-            {
+            /*{
                 courseId: 130,
                 name:"Emne 1",
-                img:"path/to/file.jpg",
+                img:"statics/img/subject-one.png",
+                alt:"Emne 1",
                 description:'Se hva du har lært, og jobbet med tidligere'
 
             },
             {
                 courseId: 140,
                 name:"Emne 2",
-                img:"path/to/file.jpg",
+                img:"statics/img/subject-two.png",
+                alt:"Emne 2",
                 description:'Se hva du har lært, og jobbet med tidligere'
 
             },
             {
                 courseId: 150,
                 name:"Emne 3",
-                img:"path/to/file.jpg",
+                img:"statics/img/subject-three.png",
+                alt:"Emne 3",
                 description:'Se hva du har lært, og jobbet med tidligere'
 
-            }
+            }*/
             
         ],
         archive: [

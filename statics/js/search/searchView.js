@@ -1,3 +1,4 @@
+
 updatesearchView()
     function updatesearchView(){
         let html = /*HTML*/`
@@ -18,3 +19,10 @@ updatesearchView()
         
      return html;
     }
+
+        
+
+     
+
+        
+     
