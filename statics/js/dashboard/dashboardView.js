@@ -26,7 +26,7 @@ function dashmain()
         //  Creating an HTML
         html += /*HTML*/`
             <div> 
-            <img src="${course[i].img}" alt = "${course[i].alt}">
+            <img src="${course[i].img}" alt="${course[i].alt}">
                 <h3>${course[i].name}</h3>
                 <p>${course[i].description}</h3>
             </div>`;
@@ -47,11 +47,15 @@ function milestoneView()
 }
 function feedbackView()
 {
+    //  Fetch user id
+
+    //  Fetch feedback
+    let tf = model.data.users[0].feedbacks[0];
     let html = /*HTML*/`
-        <div>
+        <div class="name">
             <img>
-            <div> label</div>
-            <div> feedback</div>
+            <b>${tf.name}</b></div>
+            ${tf.comments}
         </div>`;
 
     return html;
