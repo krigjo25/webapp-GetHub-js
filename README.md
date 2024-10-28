@@ -7,8 +7,18 @@
 ## User stories
 
 ### Chorei
+As a user i want to view the today's lecture, retrieve any usefull links regarding this Chorei, and I want to write an reflective student log
+which i can go back on later.
 
 ####    Accepted Criteria
+
+-   Able to post a video into the archive
+-   Able to add usefull links for this weeks subject
+-   Able to write a reflective student log
+-   -   Today's mood
+-   -   Todays's Programming experiences
+-   -   Today's Chorei reflection
+-   -   Today's Team Collabration 
 
 ### Dashboard
 
