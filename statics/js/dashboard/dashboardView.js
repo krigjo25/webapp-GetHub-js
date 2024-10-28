@@ -35,16 +35,6 @@ function dashmain()
     return html
 }
 
-function milestoneView()
-{
-
-    let html = /*HTML*/ `
-        <div>
-            <div>
-            </div>
-        </div>`;
-    return html;
-}
 function feedbackView()
 {
     //  Fetch user id
