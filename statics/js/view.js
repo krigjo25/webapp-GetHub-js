@@ -8,11 +8,12 @@ function navigationMenu()
     html = /*HTML*/`
     
     <nav>
-    <div>
-        <button onclick="navigateView('chorei')">Chorei</button>
-        <button onclick="navigateView('journal')">Student-Journal</button>
-        <button onclick="navigateView('moodle')">Moodle</button>
-    </div>`;
+        <div>
+            <button onclick="navigateView('chorei')">Chorei</button>
+            <button onclick="navigateView('journal')">Student-Journal</button>
+            <button onclick="navigateView('moodle')">Moodle</button>
+        </div>
+    </nav>`;
 
 
     return html;

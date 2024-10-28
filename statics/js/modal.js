@@ -50,8 +50,6 @@ const model = {
                 courses: [100,200,300],
                 feedbacks: [
                     {teacher:1001, name:"Jhon Doe", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}],
-                //assignments: model.data.courses[0].assignments ,
-                //milestone: model.data.users[0].assignments / modal.data.courses[0].assignments,
                 log: [ // StudentlogView
                     {
                         time:'2020-12-12',
