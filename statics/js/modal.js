@@ -1,7 +1,7 @@
 const model = {
     app:{
         // Dash board 
-        currentpage:'login',
+        currentpage:'journal',
     },
 
     input:{
