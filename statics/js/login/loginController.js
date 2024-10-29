@@ -19,7 +19,22 @@ function loginHandler(event) {
         alert("Login successful!");
         model.app.currentpage = 'dashboard';  // Update the model's state to navigate to the main page
         updateView();  // Render the appropriate view based on the new state
+        sessionUser();  // Initialize the session
     } else {
         alert("Incorrect login credentials");
     }
+}
+
+// Initialize the session
+function sessionUser()
+{
+    for (let i = 0; i < model.users.length; i++)
+    {
+        if (model.users[i].name == model.app.inputs.login.username)
+        {
+            model.session.id = model.users[i].id;
+        }
+    }
+    //  Fetch id from user in model
+
 }
