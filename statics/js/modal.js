@@ -149,6 +149,8 @@ const model = {
             };
             this.archive.push(newChorei);
             }
-        }
-       
-    }
+        },
+    session: {
+        id: null,
+    },
+}
