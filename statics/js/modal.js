@@ -81,7 +81,7 @@ const model = {
             },
             {
                 courseId: 120,
-                name:"Student-journal",
+                name:"journal",
                 img:"statics/img/student-log.png",
                 alt:"Student-journal",
                 description:'Se hva du har lært, og jobbet med tidligere'
