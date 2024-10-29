@@ -6,23 +6,16 @@ updatesearchView()
         <h3>Søk</h3>
         <input
         type ="text"
-        oninput = "model.input.search.text = this.value"
-        value = "${model.input.search.text}"/>
-        <button>Søk</button>
+        oninput = "model.inputs.search.text = this.value"
+        value ="";/>
+        <button onclick()>Søk</button>
+
         ` ;
-
-
-        
-
-     
-
-        
-     return html;
+    return html;
     }
 
         
 
      
 
-        
-     
+    
