@@ -1,15 +1,14 @@
 
 
-    function updatesearchView(){
+function updatesearchView(){
 
-         const html = /*HTML*/`
+    const html = /*HTML*/`
         <h1>Daglig Logg:</h1>
         <div>
             ${navigationMenu()}
         </div>
         <div>
             <h2>Logg Arkiv:</h2>
-           
             <table>
                 <tr>
                     <th>Dato</th>
