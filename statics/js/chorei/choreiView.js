@@ -26,6 +26,7 @@ function choreiView() {
                 <label for="choreiNote2">Input koding: Område for elev å notere</label>
                 <textarea id="choreiNote2" oninput="model.input.choreiPage.code = this.value"></textarea>
             </div>
+            <button onclick="saveLogEntry()">Lagre Chorei</button>
         </div>
         <div>
             <h2>Relatert info for i dag:</h2>
