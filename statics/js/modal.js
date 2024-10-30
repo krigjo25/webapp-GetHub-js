@@ -50,9 +50,9 @@ const model = {
                 courses: [100,200,300],
                 feedbacks: [
                     {teacher:1001, name:"Jhon Doe", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}],
-                log: [ // StudentlogView
+                log: [ // StudentlogView word 
                     {
-                        time:'2020-12-12',
+                        date:'2020-12-12',
                         title:"UKE 1 - Emne 1 - Mandag", 
                         nklog:"Chorei - Nøkkelkompetanse", 
                         teamlog:"Gruppen har vært fantastisk idag 100% oppmøte også videre", 

@@ -17,34 +17,43 @@ function searchLogs(filterDate, filterTitle ) {
         //people = filter(search, id)
     //}
     let html = "";
-    let id = model.people;
+    let id = model.session.id; // Hent personid
+
     const search= model.inputs.search.text;
     if(model.inputs.search.text !== ''){
-      people = filterPeople(search ,id);
+      people = filterPeople(search, id);
 
     }
     searchResults();
 }
 
   function filterPeople(search,id) {
+
     let filterPeople = [];
     let users = model.data.users;
-    for(let i=0;i<model.users.length;i++){
-      if(userid === id){
-           let user = model.data.users.log
-        for(let i=0;i<user.length;i++) {
-          if(user.title.includes(search))}
-          filteredPeople.push(user);
-          elseIf{
-            userDate == search 
+
+    for(let i = 0;i < users.length; i++){
+
+      if(users[i].id === id){ // users.id
+
+        //  Create a variable and assign specsific user log
+        let word = users[i].log;
+        
+        for(let i = 0; i < word.length; i++) 
+        {
+          //  Ensure that word.title.includes the searched word
+          if(word.title.includes(search)) 
+          {
+            filterPeople.push(word);
           }
-           }
+          else if(word.date.includes(search)){ 
+            filterPeople.push(word);
+          } 
+        }
 
-   
+        return filterPeople;
+    }  
 }
-
-
-
 
 };
   
