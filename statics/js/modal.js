@@ -33,6 +33,12 @@ const model = {
         },
 
         choreiPage: {
+            mood: "",
+            collabration: "",
+            chorei:"",
+            code:"",
+            date: new Date().toISOString().split('T')[0],
+
             userlog: "",
         }
 

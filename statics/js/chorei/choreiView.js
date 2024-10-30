@@ -12,19 +12,19 @@ function choreiView() {
             <h2>Dagens Chorei:</h2>
             <div>
                 <label for="choreiNote1">Input humør: Område for elev å notere</label>
-                <textarea id="choreiNote1" oninput="model.input.choreiPage.userlog = this.value"></textarea>
+                <textarea id="choreiNote1" oninput="model.input.choreiPage.mood = this.value"></textarea>
             </div>
             <div>
                 <label for="choreiNote2">Input samarbeid: Område for elev å notere</label>
-                <textarea id="choreiNote2" oninput="model.input.choreiPage.userlog2 = this.value"></textarea>
+                <textarea id="choreiNote2" oninput="model.input.choreiPage.collabration = this.value"></textarea>
             </div>
             <div>
                 <label for="choreiNote2">Input nøkkelkomp/chorei: Område for elev å notere</label>
-                <textarea id="choreiNote2" oninput="model.input.choreiPage.userlog2 = this.value"></textarea>
+                <textarea id="choreiNote2" oninput="model.input.choreiPage.chorei = this.value"></textarea>
             </div>
             <div>
                 <label for="choreiNote2">Input koding: Område for elev å notere</label>
-                <textarea id="choreiNote2" oninput="model.input.choreiPage.userlog2 = this.value"></textarea>
+                <textarea id="choreiNote2" oninput="model.input.choreiPage.code = this.value"></textarea>
             </div>
         </div>
         <div>
