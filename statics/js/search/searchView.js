@@ -1,5 +1,5 @@
 
-updatesearchView()
+
     function updatesearchView(){
 
          const html = /*HTML*/`
@@ -9,7 +9,7 @@ updatesearchView()
         </div>
         <div>
             <h2>Logg Arkiv:</h2>
-            ${updatesearchView()}
+           
             <table>
                 <tr>
                     <th>Dato</th>
@@ -30,12 +30,12 @@ updatesearchView()
                 `).join('')}
             </table>
         </div>
-    `;
+    
     document.getElementById('app').innerHTML = html;
 }
 
         ` ;
-    return html;
+        updatesearchView()
     }
 
         

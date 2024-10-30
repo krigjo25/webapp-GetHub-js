@@ -1,7 +1,6 @@
 /* - call Search function from logView
 -The user can filter the logs by date / title in logView
 -The user can view all written logs from ChoreiPage */
-updatesearchView()
 
 function searchLogs(filterDate, filterTitle ) {
   //  Fetch userlogs -> modal model.session.id
