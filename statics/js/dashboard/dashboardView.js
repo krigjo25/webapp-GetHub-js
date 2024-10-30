@@ -21,7 +21,7 @@ function dashmain()
     {
         //  Creating an HTML
         html += /*HTML*/`
-            <div onclick="navigateView('${course[i].name}')"> 
+            <div class="card" onclick="navigateView('${course[i].name}')"> 
             <img src="${course[i].img}" alt="${course[i].alt}">
                 <h3>${course[i].name}</h3>
                 <p>${course[i].description}</h3>
