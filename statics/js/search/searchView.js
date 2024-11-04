@@ -1,7 +1,8 @@
 
 
     function updatesearchView(){
-
+        let input = model.input.search.text
+        
          const html = /*HTML*/`
         <h1>Daglig Logg:</h1>
         <div>
@@ -9,6 +10,7 @@
         </div>
         <div>
             <h2>Logg Arkiv:</h2>
+            <button id="searchButton">Søk</button>
            
             <table>
                 <tr>
@@ -24,6 +26,7 @@
     `
     document.getElementById('app').innerHTML = html;
 }
+
 
         
         

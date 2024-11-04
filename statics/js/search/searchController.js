@@ -19,8 +19,10 @@ function searchLogs(filterDate, filterTitle ) {
     let id = model.session.id; // Hent personid
 
     const search= model.inputs.search.text;
-    if(model.inputs.search.text !== ''){
-      people = filterPeople(search, id);
+    if(model.inputs.search.text == ''){
+      let logs = filterPeople(search, id);
+      // vis logs
+    } else {
 
     }
     searchResults();
@@ -28,7 +30,7 @@ function searchLogs(filterDate, filterTitle ) {
 
   function filterPeople(search,id) {
 
-    let filterPeople = [];
+    let filteredLogs = [];
     let users = model.data.users;
 
     for(let i = 0;i < users.length; i++){
@@ -43,14 +45,14 @@ function searchLogs(filterDate, filterTitle ) {
           //  Ensure that word.title.includes the searched word
           if(word.title.includes(search)) 
           {
-            filterPeople.push(word);
+            filteredLogs.push(word);
           }
           else if(word.date.includes(search)){ 
-            filterPeople.push(word);
+            filteredLogs.push(word);
           } 
         }
 
-        return filterPeople;
+        return filteredLogs;
     }  
 }
 
