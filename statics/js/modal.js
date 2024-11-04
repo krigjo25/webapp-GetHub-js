@@ -66,7 +66,7 @@ const model = {
                         codelog:"lærte å kode i dag med javascript",},
                     {
                         date:'2020-12-12',
-                        title:"UKE 1 - Emne 1 - Mandag", 
+                        title:"UKE 2 - Emne 1 - Mandag", 
                         nklog:"kakeguri - Nøkkelkompetanse", 
                         teamlog:"Gruppen har vært fantastisk idag 100% oppmøte også videre", 
                         moodlog:"sove dårlig i natt kake guri over hode", 
@@ -74,7 +74,7 @@ const model = {
                     ]
             },
         ], //?  model.data.users[id].log[filterResult]
-
+        
         courses: [
             //  Kurs beskrivelse
             {
@@ -164,7 +164,11 @@ const model = {
             this.archive.push(newChorei);
             }
         },
-    session: {
+    
+        session: {
         id: null,
     },
+    search:
+    [
+    ]
 }
