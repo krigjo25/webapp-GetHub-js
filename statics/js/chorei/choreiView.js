@@ -4,9 +4,8 @@ function choreiView() {
         <h1>Chorei område:</h1>
         <div>
             <button onclick="navigateToChoreiView('chorei')">Chorei</button>
-            <button onclick="navigateToChoreiView('logg')">Logg</button>
+            <button onclick="navigateToChoreiView('journal')">Logg</button>
             <button onclick="navigateToChoreiView('moodle')">Moodle</button>
-            <button onclick="navigateToChoreiView('annet')">Annet</button>
         </div>
         <div>
             <h2>Dagens Chorei:</h2>
