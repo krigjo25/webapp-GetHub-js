@@ -1,4 +1,5 @@
-function searchView(){
+function searchView()
+{
     document.getElementById('app').innerHTML = /*html*/`
 
     <h1>Daglig Logg:</h1>
@@ -9,7 +10,7 @@ function searchView(){
             <h2>Logg Arkiv:</h2>
             <input oninput="model.input.loggPage.search = this.value">
             <button onclick ="searchLogs()">Søk</button>
-            
+
             <table>
                 <tr>
                     <th>Title</th>
@@ -19,9 +20,10 @@ function searchView(){
                     <th>Mood Log</th>
                     <th>Code Log</th>
                 </tr>
-                ${model.search.map(entry => `
+
+                ${model.search.map(entry => /*HTML*/`
                     <tr>
-                        <td><b>${entry.title}<b></td>
+                        <td><b>${entry.title}</b></td>
                         <td>${entry.date}</td>
                         <td>${entry.nklog}</td>
                         <td>${entry.teamlog}</td>
@@ -30,9 +32,6 @@ function searchView(){
                     </tr>
                 `).join('')}
             </table>
-        </div>
-    
-    
-    `;
+        </div>`;
     
 }
