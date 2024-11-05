@@ -1,19 +1,15 @@
 function dashboardView()
 {
-    // header
+        document.getElementById('app').innerHTML = /*HTML*/`
+            <h1>Dashboard</h1>
+            ${dashmain()}
 
-    html = /*HTML*/`
-        <h1>Dashboard</h1>
-        ${dashmain()}
-
-        ${feedbackView()}`;
-
-        document.getElementById('app').innerHTML = html;
+            ${feedbackView()}`;;
 }
 
 function dashmain()
 {
-    //  Initializing a course variable
+    //  Initializing variables with given values
     let html ="";
     let course = model.data.courses;
 
