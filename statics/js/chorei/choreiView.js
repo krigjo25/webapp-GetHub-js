@@ -18,14 +18,14 @@ function choreiView() {
                 <textarea id="choreiNote2" oninput="model.input.choreiPage.collabration = this.value"></textarea>
             </div>
             <div>
-                <label for="choreiNote2">Input nøkkelkomp/chorei: Område for elev å notere</label>
-                <textarea id="choreiNote2" oninput="model.input.choreiPage.chorei = this.value"></textarea>
+                <label for="choreiNote3">Input nøkkelkomp/chorei: Område for elev å notere</label>
+                <textarea id="choreiNote3" oninput="model.input.choreiPage.chorei = this.value"></textarea>
             </div>
             <div>
-                <label for="choreiNote2">Input koding: Område for elev å notere</label>
-                <textarea id="choreiNote2" oninput="model.input.choreiPage.code = this.value"></textarea>
+                <label for="choreiNote4">Input koding: Område for elev å notere</label>
+                <textarea id="choreiNote4" oninput="model.input.choreiPage.code = this.value"></textarea>
             </div>
-            <button onclick="saveLogEntry()">Lagre Chorei</button>
+            <button onclick="saveChoreiNotes()">Lagre Chorei</button>
         </div>
         <div>
             <h2>Relatert info for i dag:</h2>
