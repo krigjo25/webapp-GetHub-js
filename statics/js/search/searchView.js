@@ -22,7 +22,7 @@ function searchView(){
                 ${model.search.map(entry => `
                     <tr>
                         <td><b>${entry.title}<b></td>
-                        <td>${entry.time}</td>
+                        <td>${entry.date}</td>
                         <td>${entry.nklog}</td>
                         <td>${entry.teamlog}</td>
                         <td>${entry.moodlog}</td>
