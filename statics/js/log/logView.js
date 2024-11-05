@@ -7,9 +7,11 @@ function logView() {
         </div>
         <div>
             <h2>Logg Arkiv:</h2>
-            ${updatesearchView()}
+            <input type="text" id="search" oninput="model.input.loggPage.search = this.value ">
+            <button onclick="searchLogs()">Søk</button>
             <table>
                 <tr>
+                    <th>Title</th>
                     <th>Dato</th>
                     <th>NøkkelKompetanse</th>
                     <th>Team Log</th>

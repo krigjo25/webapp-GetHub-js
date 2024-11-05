@@ -2,57 +2,53 @@
 -The user can filter the logs by date / title in logView
 -The user can view all written logs from ChoreiPage */
 
-function searchLogs(filterDate, filterTitle ) {
-  //  Fetch userlogs -> modal model.session.id
-    //  Fetch only userlogs at the given date or title
 
-    //     const search = modal.inputs.search.text;
+function searchLogs() {
 
-    
-    //  Ensure input has a value
-    // if (modal.inputs.search.text != "")
-    // {
-        //  Filter people by given input
-        //people = filter(search, id)
-    //}
     let html = "";
     let id = model.session.id; // Hent personid
+    //  Search for the text in the search bar
+    let search = model.input.loggPage.search;
 
-    const search= model.inputs.search.text;
-    if(model.inputs.search.text !== ''){
-      people = filterPeople(search, id);
+    //  Ensure that the search bar is not empty
+    console.log(search);
+    if(search !== ''){
 
+      //  Filter the logs
+      search = filterPeople(search, id);
     }
-    searchResults();
 }
 
-  function filterPeople(search,id) {
+function filterPeople(search,id) {
 
-    let filterPeople = [];
-    let users = model.data.users;
+  //  Initialize an empty array
+  let filterLogs = [];
 
-    for(let i = 0;i < users.length; i++){
+  //  Initialize a variable and assign the users array
+  let users = model.data.users;
 
-      if(users[i].id === id){ // users.id
+  for(let i = 0;i < users.length; i++){
 
-        //  Create a variable and assign specsific user log
-        let word = users[i].log;
-        
-        for(let i = 0; i < word.length; i++) 
-        {
-          //  Ensure that word.title.includes the searched word
-          if(word.title.includes(search)) 
-          {
-            filterPeople.push(word);
-          }
-          else if(word.date.includes(search)){ 
-            filterPeople.push(word);
-          } 
-        }
+    //  Ensure that the user id is equal to the id
+    if(model.data.users[i].id === id)
+      {
+      //  Create a variable and assign specsific user lo
+      
+      let word = model.data.users[i].log;
 
-        return filterPeople;
+      //  Ensure that logs.title includes the search
+      console.log(search);
+      if(word.title.includes(search))
+      {
+        console.log(word);
+        filterLogs.push(word);
+      }
+      console.log(filterLogs);
+
+  
     }  
-}
+  }
+  return filterLogs;
 
 };
   
