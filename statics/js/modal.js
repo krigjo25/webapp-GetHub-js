@@ -168,7 +168,5 @@ const model = {
         session: {
         id: null,
     },
-    search:
-    [
-    ]
+    search: null
 }
