@@ -10,25 +10,26 @@ function searchLogs() {
   //  peke mot ->  loggPage.search ->
   const search = model.input.loggPage.search;
 
+
   //  Endre den her til variablen som peker mot den teksten
-  if(search != '')
+  if(search == '')
   {
-    console.log("søke test", search);
+
     //  Set the current page to search page
-    model.app.currentpage = 'search';
+     modal.app.currentpage = 'search';
 
-    //  Filter the logs
-    var logs = filterPeople(search, id);
+      //  Filter the logs
+      let logs = filterPeople(search, id);
   }
-
   // Initialize the search result to the model
-  model.search = logs;
+     model.search.push(logs); 
 
   //  Update the page view
   updateView();
 }
 
   function filterPeople(search,id) {
+
     //  Initializing an filtered array
     let filteredLogs = [];
 
@@ -43,36 +44,34 @@ function searchLogs() {
 
         //  Create a variable and assign specefic user log
         let word = users[i].log;
-        console.log("test array word ->", word);
 
         //  2d linear algorithm
         for (let j=0; j < word.length; j++)
         {
             //  Ensure that logs includes the searched item .includes(search)
-          if (word[j].date.includes(search))
+          if (word.date.includes(search))
           {
             filteredLogs.push(word);
 
-          }else if(word[j].title.includes(search))
+          }else if(word.title.includes(search))
           {
             filteredLogs.push(word);
           }
-          else if(word[j].nklog.includes(search)){
+          else if(word.nklog.includes(search)){
             filteredLogs.push(word);
           }
-          else if(word[j].teamlog.includes(search)){
+          else if(word.teamlog.includes(search)){
             filteredLogs.push(word);
           }
-          else if(word[j].moodlog.includes(search)){
+          else if(word.moodlog.includes(search)){
             filteredLogs.push(word);
           }
-          else if(word[j].codelog.includes(search)){
+          else if(word.codelog.includes(search)){
             filteredLogs.push(word);
           }
  
       }
     }
-    console.log("test array filteredLogs ->",filteredLogs);
     return filteredLogs;
 
 }
