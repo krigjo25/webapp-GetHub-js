@@ -2,62 +2,81 @@
 -The user can filter the logs by date / title in logView
 -The user can view all written logs from ChoreiPage */
 
-function searchLogs(filterDate, filterTitle ) {
-  //  Fetch userlogs -> modal model.session.id
-    //  Fetch only userlogs at the given date or title
+function searchLogs() {
 
-    //     const search = modal.inputs.search.text;
+  //  Initialize user id, search bar text
+  let id = model.session.id;
 
-    
-    //  Ensure input has a value
-    // if (modal.inputs.search.text != "")
-    // {
-        //  Filter people by given input
-        //people = filter(search, id)
-    //}
-    let html = "";
-    let id = model.session.id; // Hent personid
+  //  peke mot ->  loggPage.search ->
+  const search = model.input.loggPage.search;
 
-    const search= model.inputs.search.text;
-    if(model.inputs.search.text == ''){
+
+  //  Endre den her til variablen som peker mot den teksten
+  if(search == '')
+  {
+
+    //  Set the current page to search page
+     modal.app.currentpage = 'search';
+
+      //  Filter the logs
       let logs = filterPeople(search, id);
-      // vis logs
-    } else {
+  }
+  // Initialize the search result to the model
+     model.search.push(logs); 
 
-    }
-    searchResults();
+  //  Update the page view
+  updateView();
 }
 
   function filterPeople(search,id) {
 
+    //  Initializing an filtered array
     let filteredLogs = [];
+
+    //  Initializing a db users array
     let users = model.data.users;
 
+    // linear algorithm
     for(let i = 0;i < users.length; i++){
 
-      if(users[i].id === id){ // users.id
+      //  Ensure that the user is equal to the selected id
+      if (users[i].id === id){ // users.id
 
-        //  Create a variable and assign specsific user log
+        //  Create a variable and assign specefic user log
         let word = users[i].log;
-        
-        for(let i = 0; i < word.length; i++) 
+
+        //  2d linear algorithm
+        for (let j=0; j < word.length; j++)
         {
-          //  Ensure that word.title.includes the searched word
-          if(word.title.includes(search)) 
+            //  Ensure that logs includes the searched item .includes(search)
+          if (word.date.includes(search))
+          {
+            filteredLogs.push(word);
+
+          }else if(word.title.includes(search))
           {
             filteredLogs.push(word);
           }
-          else if(word.date.includes(search)){ 
+          else if(word.nklog.includes(search)){
             filteredLogs.push(word);
-          } 
-        }
+          }
+          else if(word.teamlog.includes(search)){
+            filteredLogs.push(word);
+          }
+          else if(word.moodlog.includes(search)){
+            filteredLogs.push(word);
+          }
+          else if(word.codelog.includes(search)){
+            filteredLogs.push(word);
+          }
+ 
+      }
+    }
+    return filteredLogs;
 
-        return filteredLogs;
-    }  
+}
 }
 
-};
-  
 
 
 
