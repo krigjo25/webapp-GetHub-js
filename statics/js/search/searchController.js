@@ -2,56 +2,81 @@
 -The user can filter the logs by date / title in logView
 -The user can view all written logs from ChoreiPage */
 
-
 function searchLogs() {
 
-    let html = "";
-    let id = model.session.id; // Hent personid
-    //  Search for the text in the search bar
-    let search = model.input.loggPage.search;
+  //  Initialize user id, search bar text
+  let id = model.session.id;
 
-    //  Ensure that the search bar is not empty
-    console.log(search);
-    if(search !== ''){
+  //  peke mot ->  loggPage.search ->
+  const search = model.input.loggPage.search;
+
+
+  //  Endre den her til variablen som peker mot den teksten
+  if(search == '')
+  {
+
+    //  Set the current page to search page
+     modal.app.currentpage = 'search';
 
       //  Filter the logs
-      search = filterPeople(search, id);
-    }
+      let logs = filterPeople(search, id);
+  }
+  // Initialize the search result to the model
+     model.search.push(logs); 
+
+  //  Update the page view
+  updateView();
 }
 
-function filterPeople(search,id) {
+  function filterPeople(search,id) {
 
-  //  Initialize an empty array
-  let filterLogs = [];
+    //  Initializing an filtered array
+    let filteredLogs = [];
 
-  //  Initialize a variable and assign the users array
-  let users = model.data.users;
+    //  Initializing a db users array
+    let users = model.data.users;
 
-  for(let i = 0;i < users.length; i++){
+    // linear algorithm
+    for(let i = 0;i < users.length; i++){
 
-    //  Ensure that the user id is equal to the id
-    if(model.data.users[i].id === id)
-      {
-      //  Create a variable and assign specsific user lo
-      
-      let word = model.data.users[i].log;
+      //  Ensure that the user is equal to the selected id
+      if (users[i].id === id){ // users.id
 
-      //  Ensure that logs.title includes the search
-      console.log(search);
-      if(word.title.includes(search))
-      {
-        console.log(word);
-        filterLogs.push(word);
+        //  Create a variable and assign specefic user log
+        let word = users[i].log;
+
+        //  2d linear algorithm
+        for (let j=0; j < word.length; j++)
+        {
+            //  Ensure that logs includes the searched item .includes(search)
+          if (word.date.includes(search))
+          {
+            filteredLogs.push(word);
+
+          }else if(word.title.includes(search))
+          {
+            filteredLogs.push(word);
+          }
+          else if(word.nklog.includes(search)){
+            filteredLogs.push(word);
+          }
+          else if(word.teamlog.includes(search)){
+            filteredLogs.push(word);
+          }
+          else if(word.moodlog.includes(search)){
+            filteredLogs.push(word);
+          }
+          else if(word.codelog.includes(search)){
+            filteredLogs.push(word);
+          }
+ 
       }
-      console.log(filterLogs);
+    }
+    return filteredLogs;
 
-  
-    }  
-  }
-  return filterLogs;
+}
+}
 
-};
-  
 
 
 

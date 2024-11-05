@@ -1,4 +1,3 @@
-
 function searchView(){
     document.getElementById('app').innerHTML = /*html*/`
 
@@ -31,5 +30,9 @@ function searchView(){
                     </tr>
                 `).join('')}
             </table>
-        </div>` //;
+        </div>
+    
+    
+    `;
+    
 }
