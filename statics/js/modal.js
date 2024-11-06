@@ -127,7 +127,8 @@ const model = {
             }*/
             
         ],
-        archive: [
+        archive: 
+        [
             {
                 id: 1,
                 courseId: 100,
@@ -151,7 +152,8 @@ const model = {
                 video: "https://www.youtube.com/asdkjasdlkasjdklasd",
                 date: "16.10.2024"
                 // new Date() -> model.data.choreiarkiv[today].date
-            },],
+            },
+        ],
       
         
         //addChoreiArchive(name, video) {
@@ -163,10 +165,11 @@ const model = {
            // };
           //  this.archive.push(newChorei);
            // }
-       // },
+        },
     
-        session: {
-        id: null,
-    },
-    search: null
+        session: 
+        {
+            id: null,
+        },
+        search: null,
 }
