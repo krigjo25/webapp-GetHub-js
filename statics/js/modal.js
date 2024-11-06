@@ -1,7 +1,7 @@
 const model = {
     app:{
         // Dash board 
-        currentpage:'login',
+        currentpage:'dashboard',
     },
 
     input:{
@@ -90,6 +90,7 @@ const model = {
                 name:"Moodle",
                 img:"statics/img/moodle.png",
                 alt:"Moodle",
+                link:"https://getacademy.moodlecloud.com/",
                 description:"Relaterte oppgaver"
 
             },
