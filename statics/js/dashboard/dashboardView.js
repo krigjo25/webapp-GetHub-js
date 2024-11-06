@@ -1,7 +1,17 @@
 function dashboardView()
 {
+    //  Fetch user id
+    let user = model.data.users;
+    for (let i = 0; i < user.length; i++)
+        {
+            if (user[i].id == model.session.id)
+            {
+                user = user[i].username;
+                break;
+            }
+        }
         document.getElementById('app').innerHTML = /*HTML*/`
-            <h1>Dashboard</h1>
+            <h1><span>Good</span> <span>Morning</span> ${user}, Welcome to <span>Get</span> <span>Academy</span>'s <span>Dash</span><span>board</span></h1>
             ${dashmain()}
 
             ${feedbackView()}`;;
@@ -47,15 +57,40 @@ function dashmain()
 function feedbackView()
 {
     //  Fetch user id
+    let users = model.data.users;
 
+    let html = /*HTML*/ `<div class='feedback-container'>`;
     //  Fetch feedback
-    let tf = model.data.users[0].feedbacks[0];
-    let html = /*HTML*/`
-        <div class="name">
-            <img>
-            <b>${tf.name}</b></div>
-            ${tf.comments}
-        </div>`;
+    for (let i = 0; i < users.length; i++)
+    {
 
-    return html;
-}
+        if (users[i].id == model.session.id)
+        {
+            //  Initialize feedbacks for given user
+            let feedbacks = model.data.users[i].feedbacks;
+
+            for (let j = 0; j < feedbacks.length; j++)
+                {
+                    //  Initialize feedbacks for given user
+                    let teacher = users[i].feedbacks[i];
+
+
+                    html += /*HTML*/`
+                        <div class='feedback'>
+                            <div>
+                                <img src="" alt="teacher.jpg">
+                            </div>
+                            <div class='name'>
+                                <b>${teacher.name}</b>
+                            </div>
+                            <div class='feed'>
+                                ${teacher.comments}
+                            </div>
+                        </div>`;
+
+
+               }
+        }
+    }
+    return html += /*HTML*/`</div>`;
+}    
