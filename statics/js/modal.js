@@ -54,8 +54,19 @@ const model = {
                 username: "kompis",
                 password: 1234,
                 courses: [100,200,300],
-                feedbacks: [
-                    {teacher:1001, name:"Jhon Doe", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}],
+                feedbacks: 
+                [
+                    {
+                        teacher:1001, 
+                        name:"Jhon Doe", 
+                        comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'
+                    },
+                    {
+                        teacher:1001, 
+                        name:"Jhon Doe", 
+                        comments:'Kjempe bra ! Du har kommet deg langt i forhold til pensum !'
+                    },
+                ],
                 log: [ // StudentlogView word 
                 
                     {
