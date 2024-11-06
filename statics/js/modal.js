@@ -57,6 +57,7 @@ const model = {
                 feedbacks: [
                     {teacher:1001, name:"Jhon Doe", comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'}],
                 log: [ // StudentlogView word 
+                
                     {
                         date:'2020-12-12',
                         title:"UKE 1 - Emne 1 - Mandag", 
@@ -71,7 +72,8 @@ const model = {
                         teamlog:"Gruppen har vært fantastisk idag 100% oppmøte også videre", 
                         moodlog:"sove dårlig i natt kake guri over hode", 
                         codelog:"lærte å kode i dag med javascript",}
-                    ]
+                    ],
+                completedTopics: [],
             },
         ], //?  model.data.users[id].log[filterResult]
         
