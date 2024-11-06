@@ -10,19 +10,36 @@ function dashboardView()
 function dashmain()
 {
     //  Initializing variables with given values
-    let html ="";
+    let html ="<div class='card-container'>";
     let course = model.data.courses;
 
     for (let i = 0; i < course.length; i++)
     {
-        //  Creating an HTML
-        html += /*HTML*/`
-            <div class="card" onclick="navigateView('${course[i].name}')"> 
-            <img src="${course[i].img}" alt="${course[i].alt}">
-                <h3>${course[i].name}</h3>
-                <p>${course[i].description}</h3>
-            </div>`;
+        if (course[i].link)
+
+        {
+            //  Creating an HTML Card
+            html += /*HTML*/`
+            <a href="${course[i].link}">
+                <div class="card"> 
+                <img src="${course[i].img}" alt="${course[i].alt}">
+                    <h3>${course[i].name}</h3>
+                    <p>${course[i].description}</h3>
+                </div>
+            </a>`;
+        }
+        else
+        {
+            //  Creating an HTML Card
+            html += /*HTML*/`
+                    <div class="card" onclick="navigateView('${course[i].name}')"> 
+                    <img src="${course[i].img}" alt="${course[i].alt}">
+                        <h3>${course[i].name}</h3>
+                        <p>${course[i].description}</h3>
+                    </div>`;
+        }
     }
+    html += "</div>";
 
     return html
 }

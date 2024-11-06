@@ -1,7 +1,3 @@
-/* - call Search function from logView
--The user can filter the logs by date / title in logView
--The user can view all written logs from ChoreiPage */
-
 function searchLogs() {
 
   //  Initialize user id, search bar text
@@ -10,67 +6,71 @@ function searchLogs() {
   //  peke mot ->  loggPage.search ->
   const search = model.input.loggPage.search;
 
-
   //  Endre den her til variablen som peker mot den teksten
-  if(search == '')
+  if(search != '')
   {
-
     //  Set the current page to search page
-     model.app.currentpage = 'search';
+    model.app.currentpage = 'search';
 
-      //  Filter the logs
-      let logs = filterPeople(search, id);
+    //  Filter the logs
+    model.search = filterPeople(search, id);;
   }
+
   // Initialize the search result to the model
-     model.search.push(logs); 
+  
 
   //  Update the page view
   updateView();
 }
 
-  function filterPeople(search,id) {
+function filterPeople(search,id) {
 
-    //  Initializing an filtered array
-    let filteredLogs = [];
+  //  Initializing an filtered array
+  let filteredLogs = [];
 
-    //  Initializing a db users array
-    let users = model.data.users;
+  //  Initializing a db users array
+  let users = model.data.users;
 
-    // linear algorithm
-    for(let i = 0;i < users.length; i++){
+  // linear algorithm
+  for(let i = 0;i < users.length; i++){
 
-      //  Ensure that the user is equal to the selected id
-      if (users[i].id === id){ // users.id
+    //  Ensure that the user is equal to the selected id
+    if (users[i].id === id)
+      {
 
-        //  Create a variable and assign specefic user log
+      //  Create a variable and assign specefic user log
         let word = users[i].log;
 
         //  2d linear algorithm
         for (let j=0; j < word.length; j++)
         {
-            //  Ensure that logs includes the searched item .includes(search)
-          if (word.date.includes(search))
+          //  Ensure that logs includes the searched item .includes(search)
+          if (word[j].date.includes(search))
           {
-            filteredLogs.push(word);
+            filteredLogs.push(word[j]);
 
-          }else if(word.title.includes(search))
+          }
+          else if(word[j].title.includes(search))
           {
-            filteredLogs.push(word);
+            filteredLogs.push(word[j]);
           }
-          else if(word.nklog.includes(search)){
-            filteredLogs.push(word);
+          else if(word[j].nklog.includes(search))
+          {
+            filteredLogs.push(word[j]);
           }
-          else if(word.teamlog.includes(search)){
-            filteredLogs.push(word);
+          else if(word[j].teamlog.includes(search))
+          {
+            filteredLogs.push(word[j]);
           }
-          else if(word.moodlog.includes(search)){
-            filteredLogs.push(word);
+          else if(word[j].moodlog.includes(search))
+          {
+            filteredLogs.push(word[j]);
           }
-          else if(word.codelog.includes(search)){
-            filteredLogs.push(word);
+          else if(word[j].codelog.includes(search))
+          {
+            filteredLogs.push(word[j]);
           }
- 
-      }
+        }
     }
     return filteredLogs;
 
