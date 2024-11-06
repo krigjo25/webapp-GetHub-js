@@ -12,7 +12,7 @@ function searchLogs() {
 
 
   //  Endre den her til variablen som peker mot den teksten
-  if(search == '')
+  if(search != '')
   {
 
     //  Set the current page to search page
@@ -20,16 +20,20 @@ function searchLogs() {
 
       //  Filter the logs
       let logs = filterPeople(search, id);
+      model.search = logs;
+  console.log(logs);
+
   }
+  
   // Initialize the search result to the model
-     model.search.push(logs); 
+    
 
   //  Update the page view
   updateView();
 }
 
   function filterPeople(search,id) {
-
+   console.log(search);
     //  Initializing an filtered array
     let filteredLogs = [];
 
@@ -43,31 +47,32 @@ function searchLogs() {
       if (users[i].id === id){ // users.id
 
         //  Create a variable and assign specefic user log
-        let word = users[i].log;
+        let logs = users[i].log;
 
         //  2d linear algorithm
-        for (let j=0; j < word.length; j++)
+        for (let j=0; j < logs.length; j++)
+
         {
             //  Ensure that logs includes the searched item .includes(search)
-          if (word.date.includes(search))
+          if (logs[j].date.includes(search)) 
           {
-            filteredLogs.push(word);
+            filteredLogs.push(logs[j]);
 
-          }else if(word.title.includes(search))
+          }else if(logs[j].title.includes(search))
           {
-            filteredLogs.push(word);
+            filteredLogs.push(logs[j]);
           }
-          else if(word.nklog.includes(search)){
-            filteredLogs.push(word);
+          else if(logs[j].nklog.includes(search)){
+            filteredLogs.push(logs[j]);
           }
-          else if(word.teamlog.includes(search)){
-            filteredLogs.push(word);
+          else if(logs[j].teamlog.includes(search)){
+            filteredLogs.push(logs[j]);
           }
-          else if(word.moodlog.includes(search)){
-            filteredLogs.push(word);
+          else if(logs[j].moodlog.includes(search)){
+            filteredLogs.push(logs[j]);
           }
-          else if(word.codelog.includes(search)){
-            filteredLogs.push(word);
+          else if(logs[j].codelog.includes(search)){
+            filteredLogs.push(logs[j]);
           }
  
       }
