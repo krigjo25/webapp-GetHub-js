@@ -16,7 +16,7 @@ function searchLogs() {
   {
 
     //  Set the current page to search page
-     modal.app.currentpage = 'search';
+     model.app.currentpage = 'search';
 
       //  Filter the logs
       let logs = filterPeople(search, id);

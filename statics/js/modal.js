@@ -151,19 +151,19 @@ const model = {
                 video: "https://www.youtube.com/asdkjasdlkasjdklasd",
                 date: "16.10.2024"
                 // new Date() -> model.data.choreiarkiv[today].date
-            },
-        ],
+            },],
+      
         
-        addChoreiArchive(name, video) {
-            const newChorei= {
-                id: this.archive.length + 1,
-                name: name || null,
-                video: video || null,
-                date: new Date().toISOString().split('T')[0] // Automatically adds today's date
-            };
-            this.archive.push(newChorei);
-            }
-        },
+        //addChoreiArchive(name, video) {
+           // const newChorei= {
+              //  id: this.archive.length + 1,
+               // name: name || null,
+                //video: video || null,
+               // date: new Date().toISOString().split('T')[0] // Automatically adds today's date
+           // };
+          //  this.archive.push(newChorei);
+           // }
+       // },
     
         session: {
         id: null,
