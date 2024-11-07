@@ -87,8 +87,6 @@ function feedbackView()
                                 ${teacher.comments}
                             </div>
                         </div>`;
-
-
                }
         }
     }
