@@ -10,8 +10,40 @@ main .card-container .card {
   cursor: pointer;
 }
 main .card-container .card img {
+  transition: 0.3s;
   inline-size: 23vw;
   block-size: 65vh;
+}
+main .card-container .image-container {
+  position: relative;
+}
+main .card-container .image-container .card-overlay {
+  opacity: 0;
+  position: absolute;
+  bottom: 1vh;
+  inline-size: 23vw;
+  block-size: 65vh;
+}
+main .card-container .image-container .card-overlay:hover {
+  opacity: 0.4;
+  bottom: 1vh;
+  inline-size: 23vw;
+  block-size: 64vh;
+  background-color: white;
+}
+main .card-container .image-container .overlay-text {
+  top: 20vh;
+  position: absolute;
+  color: rgb(0, 0, 0);
+}
+main .card-container .image-container .overlay-text h2 {
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+}
+main .card-container .image-container .overlay-text p {
+  font-size: 1vw;
+  font-weight: normal;
 }
 main div.feedback-container {
   border: 1px solid black;

@@ -1,5 +1,6 @@
 main
     .card-container
+
         inline-size: 100%
         display: flex
         flex-direction: row           
@@ -8,13 +9,47 @@ main
         block-size: 100%
 
         .card
-
             cursor: pointer
+
             img
+                transition: 0.3s
                 inline-size: 23vw
                 block-size: 65vh
 
+        .image-container
+            position: relative
+
+            .card-overlay
+                opacity: 0
+                position: absolute
+                bottom: 1vh
+                inline-size: 23vw
+                block-size: 65vh
+
+            .card-overlay:hover
+                opacity: 0.4
+                bottom: 1vh
+                inline-size: 23vw
+                block-size: 64vh
+                background-color: white
+
+            .overlay-text
+                top: 20vh
+                position: absolute
+                color: rgb(0, 0, 0)
+
+                h2
+                    font-size: 3vw
+                    font-weight: bold
+                    text-align: center
+
+                p
+                    font-size: 1vw
+                    font-weight: normal
+                
+
     div.feedback-container
+
         border: 1px solid black
         display: flex
         flex-direction: row

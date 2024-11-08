@@ -31,10 +31,20 @@ function dashmain()
             //  Creating an HTML Card
             html += /*HTML*/`
             <a href="${course[i].link}">
-                <div class="card"> 
-                <img src="${course[i].img}" alt="${course[i].alt}">
-                    <h3>${course[i].name}</h3>
-                    <p>${course[i].description}</h3>
+                <div class="card">
+                    <div class ="image-container">
+                        <img src="${course[i].img}" alt="${course[i].alt}">
+                        <div class="card-overlay">
+                            <div class='overlay-text'>
+                                <h2>${course[i].name}</h2>
+                                <p>${course[i].description}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class ='description'>
+                        <h3>${course[i].name}</h3>
+                        <p>${course[i].description}</p>
+                    </div>
                 </div>
             </a>`;
         }
@@ -43,9 +53,19 @@ function dashmain()
             //  Creating an HTML Card
             html += /*HTML*/`
                     <div class="card" onclick="navigateView('${course[i].name}')"> 
-                    <img src="${course[i].img}" alt="${course[i].alt}">
-                        <h3>${course[i].name}</h3>
-                        <p>${course[i].description}</h3>
+                        <div class ="image-container">
+                            <img src="${course[i].img}" alt="${course[i].alt}">
+                            <div class="card-overlay">
+                                <div class='overlay-text'>
+                                    <h2>${course[i].name}</h2>
+                                    <p>${course[i].description}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class ='description'>
+                            <h3>${course[i].name}</h3>
+                            <p>${course[i].description}</p>
+                        </div>
                     </div>`;
         }
     }
