@@ -9,6 +9,7 @@ function searchLogs() {
   //  Endre den her til variablen som peker mot den teksten
   if(search != '')
   {
+    search.toLowerCase();
     //  Set the current page to search page
     model.app.currentpage = 'search';
 
