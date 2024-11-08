@@ -1,0 +1,51 @@
+body {
+    background-color: #121212;
+    color: rgb(238, 140, 43);
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: rgb(238, 140, 43);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header, footer {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1, footer p {
+    color: rgb(238, 140, 43);
+}
+
+button {
+    background-color: #333;
+    color: rgb(238, 140, 43);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+input, textarea {
+    background-color: #1e1e1e;
+    color: rgb(238, 140, 43);
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #888;
+}
+
+.logo {
+    color: rgb(238, 140, 43);
+}
