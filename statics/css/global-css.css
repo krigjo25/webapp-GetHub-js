@@ -25,10 +25,11 @@ header h1, footer p {
 
 button {
     background-color: #333;
-    color: rgb(238, 140, 43);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+    color: rgb(239, 149, 59);
+    border-width: initial;
+    border-style: solid;
+    border-color: rgb(123, 114, 101);
+    justify-content: center;
 }
 
 button:hover {
