@@ -53,10 +53,10 @@
 .card-container .card .image-container .overlay {
   opacity: 0;
 }
-.card-container:hover a {
+.card-container:hover a, .card-container:visited a {
   text-decoration: none;
+  color: inherit;
 }
-
 .feedback-container {
   display: flex;
   flex-wrap: wrap;
