@@ -58,13 +58,14 @@ const model = {
                 [
                     {
                         teacher:1001, 
-                        name:"Jhon Doe", 
-                        comments:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'
+                        name:"Jhon Doe",
+                        title: "Teknologi-Pedagog",
+                        comment:'Kjempe bra jobbet med emne 1, men ser at du må jobbe mer med MVC, kontakt meg ved behov for veiledning'
                     },
                     {
                         teacher:1001, 
                         name:"Jhon Doe", 
-                        comments:'Kjempe bra ! Du har kommet deg langt i forhold til pensum !'
+                        comment:'Kjempe bra ! Du har kommet deg langt i forhold til pensum !'
                     },
                 ],
                 log: [ // StudentlogView word 
