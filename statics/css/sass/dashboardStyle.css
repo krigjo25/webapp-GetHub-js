@@ -26,6 +26,7 @@
   inline-size: 100%;
   position: absolute;
   color: rgba(238, 140, 43, 0.7);
+  font-family: Halvetica;
   flex-direction: column;
   justify-content: center;
   background-color: rgba(40, 40, 40, 0.7);

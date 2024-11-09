@@ -1,42 +1,40 @@
-main
-    .card-container
+// Color varialbes for the dashboard
+$bg-color: rgba(40,40,40,0.7)
+$highlight-font: rgb(238, 140, 43, 0.7)
 
-        inline-size: 100%
-        display: flex
-        flex-direction: row           
-        flex-wrap: wrap
-        justify-content: space-around
-        block-size: 100%
+.card-container
+    inline-size: 100%
+    display: flex
+    flex-direction: row           
+    flex-wrap: wrap
+    justify-content: space-around
+    block-size: 100%
 
-        .card
-            cursor: pointer
+    .card
+        cursor: pointer
 
-            img
-                transition: 0.3s
-                inline-size: 23vw
-                block-size: 65vh
+        img
+            transition: 0.3s
+            inline-size: 100%
+            block-size: 100%
 
         .image-container
             position: relative
+            inline-size: 24vw
 
-            .card-overlay
+            .overlay
+                top: 0vh
                 opacity: 0
+                display: flex
+                block-size: 100%
+                inline-size: 100%
                 position: absolute
-                bottom: 1vh
-                inline-size: 23vw
-                block-size: 65vh
-
-            .card-overlay:hover
-                opacity: 0.4
-                bottom: 1vh
-                inline-size: 23vw
-                block-size: 64vh
-                background-color: white
-
-            .overlay-text
-                top: 20vh
-                position: absolute
-                color: rgb(0, 0, 0)
+                color: $highlight-font
+                font-family: Halvetica
+                flex-direction: column
+                justify-content: center
+                background-color: $bg-color
+                
 
                 h2
                     font-size: 3vw
@@ -46,8 +44,16 @@ main
                 p
                     font-size: 1vw
                     font-weight: normal
+            .overlay:hover
+                opacity: 1
                 
 
+            
+            &:hover
+                img
+                    filter: blur(0.1em)
+            .overlay
+                opacity: 0
     div.feedback-container
 
         border: 1px solid black

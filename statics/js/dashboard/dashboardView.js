@@ -34,11 +34,9 @@ function dashmain()
                 <div class="card">
                     <div class ="image-container">
                         <img src="${course[i].img}" alt="${course[i].alt}">
-                        <div class="card-overlay">
-                            <div class='overlay-text'>
-                                <h2>${course[i].name}</h2>
-                                <p>${course[i].description}</p>
-                            </div>
+                        <div class='overlay'>
+                           <h2>${course[i].name}</h2>
+                            <p>${course[i].description}</p>
                         </div>
                     </div>
                     <div class ='description'>
@@ -55,12 +53,10 @@ function dashmain()
                     <div class="card" onclick="navigateView('${course[i].name}')"> 
                         <div class ="image-container">
                             <img src="${course[i].img}" alt="${course[i].alt}">
-                            <div class="card-overlay">
-                                <div class='overlay-text'>
-                                    <h2>${course[i].name}</h2>
-                                    <p>${course[i].description}</p>
-                                </div>
-                            </div>
+                            <div class='overlay'>
+                            <h2>${course[i].name}</h2>
+                            <p>${course[i].description}</p>
+                        </div>
                         </div>
                         <div class ='description'>
                             <h3>${course[i].name}</h3>
