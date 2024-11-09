@@ -105,7 +105,7 @@ const model = {
                 img:"statics/img/moodle.png",
                 alt:"Moodle",
                 link:"https://getacademy.moodlecloud.com/",
-                description:"Relaterte oppgaver"
+                description:"Progammerings oppgaver "
 
             },
             {
