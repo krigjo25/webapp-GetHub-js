@@ -1,3 +1,7 @@
+/* Importing other styles*/
+@import url('dashboardStyle.css');
+
+
 body {
     background-color: #121212;
     color: rgb(238, 140, 43);
