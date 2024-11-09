@@ -11,9 +11,8 @@ function dashboardView()
             }
         }
         document.getElementById('app').innerHTML = /*HTML*/`
-            <h1><span>Good</span> <span>Morning</span> ${user}, Welcome to <span>Get</span> <span>Academy</span>'s <span>Dash</span><span>board</span></h1>
+            <h1><span>Good</span> <span>Morning</span> <span>${user}</span> </h1>
             ${dashmain()}
-
             ${feedbackView()}`;;
 }
 
@@ -76,10 +75,11 @@ function feedbackView()
     let users = model.data.users;
 
     let html = /*HTML*/ `<div class='feedback-container'>`;
-    //  Fetch feedback
+
+
     for (let i = 0; i < users.length; i++)
     {
-
+        //  Ensure that the user matches with the logged inn user
         if (users[i].id == model.session.id)
         {
             //  Initialize feedbacks for given user
@@ -90,17 +90,17 @@ function feedbackView()
                     //  Initialize feedbacks for given user
                     let teacher = users[i].feedbacks[i];
 
-
                     html += /*HTML*/`
                         <div class='feedback'>
-                            <div>
-                                <img src="" alt="teacher.jpg">
+                            <div class="img-view">
+                                <img src="statics/img/dummy_teacher_profile_image.png" alt="teacher.jpg">
+                                <div class='text'>
+                                    <h4>${teacher.name}</h4>
+                                    <h5>${teacher.title}</h5>
+                                </div>
                             </div>
-                            <div class='name'>
-                                <b>${teacher.name}</b>
-                            </div>
-                            <div class='feed'>
-                                ${teacher.comments}
+                            <div class='feed-view'>
+                                ${teacher.comment}
                             </div>
                         </div>`;
                }
