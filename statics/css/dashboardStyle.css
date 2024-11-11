@@ -1,170 +1,152 @@
-/* Import Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-
-/* Body Styling - To keep a dark and consistent background */
-body {
-  background-color: #121212;
-  color: rgb(238, 140, 43);
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
 }
 
-/* Centering the greeting */
-h1 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-/* Card Container Styling */
 .card-container {
+  gap: 20px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
-  background-color: #121212; /* Dark theme background */
-  gap: 20px; /* Add space between cards */
+  background-color: rgba(18, 18, 18, 0.9);
 }
-
-/* Card Styling */
+.card-container a {
+  text-decoration: none;
+  color: inherit;
+}
+.card-container a .card {
+  padding-block-end: 16px;
+}
 .card-container .card {
-  cursor: pointer;
-  background-color: #1e1e1e;
-  border-radius: 12px;
-  overflow: hidden;
-  width: 22vw;
   margin: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Softer, larger shadow */
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card-container .card:hover {
-  transform: scale(1.04);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
-}
-
-/* Image Styling */
-.card-container .card .image-container {
-  position: relative;
-  width: 100%;
+  cursor: pointer;
   overflow: hidden;
+  inline-size: 22vw;
+  border-radius: 12px;
+  background-color: rgb(30, 30, 30);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
-
 .card-container .card img {
-  width: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   transition: filter 0.3s;
 }
-
-/* Overlay Styling */
-.card-container .card .image-container .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(40, 40, 40, 0.8); /* Darker overlay */
-  color: rgba(238, 140, 43, 0.9); /* Slightly muted orange */
-  font-family: "Roboto", sans-serif;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.card-container .card:hover .overlay {
-  opacity: 1;
-}
-
-.card-container .card .overlay h2 {
-  font-size: 1.8vw;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-}
-
-.card-container .card .overlay p {
-  font-size: 1vw;
-  text-align: center;
-  margin-top: 5px;
-}
-
-/* Card Description */
 .card-container .card .description {
   padding: 15px;
-  color: rgb(238, 140, 43); /* Orange text */
+  color: rgb(238, 140, 43);
+  margin-block-end: 10px;
 }
-
 .card-container .card .description h3 {
   font-size: 1.3vw;
   font-weight: bold;
-  margin: 0 0 5px 0;
+  font-family: "Roboto", sans-serif;
+  margin-block-end: 5px;
 }
-
 .card-container .card .description p {
   font-size: 0.9vw;
-  color: rgb(238, 140, 43); /* Lightened text color for readability */
+  color: rgba(238, 140, 43, 0.9);
+}
+.card-container .card .image-container {
+  overflow: hidden;
+  inline-size: 100%;
+  position: relative;
+}
+.card-container .card .image-container .overlay {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: flex;
+  block-size: 100%;
+  inline-size: 100%;
+  position: absolute;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: rgba(238, 140, 43, 0.9);
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 0.3s;
+  background-color: rgba(40, 40, 40, 0.7);
+}
+.card-container .card .image-container .overlay h2 {
+  margin: 0;
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.card-container .card .image-container .overlay p {
+  font-size: 1vw;
+  text-align: center;
+  margin-block-start: 5px;
+}
+.card-container .card:hover .image-container .overlay {
+  opacity: 1;
+}
+.card-container .card:hover .image-container .overlay h2 {
+  opacity: 1;
+}
+.card-container .card:hover .image-container .overlay p {
+  opacity: 1;
+}
+.card-container .card:hover .card {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+.card-container .card:hover img {
+  filter: blur(0.1em);
 }
 
-/* Feedback Container Styling */
 .feedback-container {
+  gap: 15px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-end;
   justify-content: center;
-  padding: 20px;
-  background-color: #121212;
-  gap: 15px; /* Add space between feedback items */
+  background-color: rgba(18, 18, 18, 0.9);
 }
-
 .feedback-container .feedback {
-  background-color: #1e1e1e;
+  margin: 10px;
+  padding: 20px;
+  inline-size: 18vw;
+  border-radius: 20px;
   color: rgb(238, 140, 43);
-  border-radius: 12px;
-  padding: 15px;
-  width: 18vw;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   font-family: "Roboto", sans-serif;
+  background-color: rgb(30, 30, 30);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .feedback-container .feedback:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
-
-/* Feedback Image and Text */
 .feedback-container .img-view {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-block-end: 10px;
 }
-
 .feedback-container .img-view img {
-  width: 3vw;
-  height: 3vw;
+  block-size: 3vw;
+  inline-size: 3vw;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-inline-end: 10px;
 }
-
 .feedback-container .img-view .text h4 {
+  margin: 0;
   font-size: 1vw;
   font-weight: bold;
-  margin: 0;
+  font-family: "Work Sans", sans-serif;
 }
-
 .feedback-container .img-view .text h5 {
-  font-size: 0.8vw;
   margin: 0;
-  font-weight: normal;
-  color: #888;
+  font-size: 0.8vw;
+  font-weight: bold;
+  font-family: "Work Sans", sans-serif;
+  color: rgb(136, 136, 136);
 }
-
-/* Feedback Comment */
 .feedback-container .feed-view {
   font-size: 1vw;
-  color: rgb(238, 140, 43);
-}
+  font-family: "Roboto", sans-serif;
+  color: rgb(136, 136, 136);
+}/*# sourceMappingURL=dashboardStyle.css.map */
