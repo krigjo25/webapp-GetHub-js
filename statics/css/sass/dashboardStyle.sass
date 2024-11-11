@@ -1,6 +1,7 @@
 // Color varialbes for the dashboard
-$bg-color: rgba(40,40,40,0.7)
-$highlight-font: rgb(238, 140, 43, 0.9)
+$bg-color: rgb(18,18,18, 0.9)
+$overlay-color: rgba(30,30,30,1)
+$highlight-font: rgb(238, 140, 43)
 $Roboto: 'Roboto', sans-serif
 $Worksans: 'Work Sans', sans-serif
 
@@ -9,107 +10,145 @@ $Worksans: 'Work Sans', sans-serif
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap')
 
 .card-container
+    padding: 20px
     display: flex   
     flex-wrap: wrap
     block-size: 100%
     inline-size: 100%
     flex-direction: row
     justify-content: space-around
+    background: $bg-color
 
     .card
         cursor: pointer
+        margin: 10px
+        overflow: hidden
+        inline-size: 24vw
+        border-radius: 8px
+        transition: transform 0.3s
+        background-color: $overlay-color
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
 
         img
-            transition: 0.3s
             block-size: 100%
             inline-size: 100%
+            transition: filter 0.3s
+
+        .description
+            padding: 15px
+            color: $highlight-font
+            margin-block-end: 10px
+
+        p
+            font-size: 1vw
+            font-family: $Roboto
+        h3
+            font-size: 1.5vw
+            font-family: $Roboto
+            margin-block-end: 10px
 
         .image-container
-            position: relative
+
+            overflow: hidden
             inline-size: 24vw
+            position: relative
 
             .overlay
                 top: 0vh
+                left: 0vw
                 opacity: 0
                 display: flex
                 block-size: 100%
                 inline-size: 100%
                 position: absolute
+                align-items: center
+                font-family: $Worksans
                 color: $highlight-font
                 font-family: Halvetica
                 flex-direction: column
                 justify-content: center
+                transition: opacity 0.3s
                 background-color: $bg-color
                 
 
                 h2
-                    font-size: 3vw
+                    margin: 0
+                    font-size: 2vw
                     font-weight: bold
                     text-align: center
-                    font-family: $Worksans
-
-                p
-                    font-size: 1.5vw
-                    font-weight: normal
                     font-family: $Roboto
 
-            .overlay:hover
-                opacity: 1
+                p
+                    font-size: 1.2vw
+                    font-weight: normal
+                    font-family: $Roboto
+                    margin-block-start: 10px
 
-            &:hover
-                img
-                    filter: blur(0.1em)
+            .overlay:hover
+                opacity: 0.7
+
+        &:hover
+            .card
+                transform: scale(1.05)
+            img
+                filter: blur(0.1em)
 
             .overlay
                 opacity: 0
+    a
+        text-decoration: none
+        color: inherit
     
     &:hover, &:visited
         a
-            text-decoration: none
+            
             color: inherit
-    &:visited
+            text-decoration: none
+    
+
 .feedback-container
     display: flex
     flex-wrap: wrap
-    flex-direction: row
     align-content: flex-end
     justify-content: flex-start
+    background-color: $bg-color
+
 
     .feedback
-        padding: 1vw
-        margin-inline: 1vw
+
+        margin: 10px
+        padding: 20px
+        inline-size: 20vw
         border-radius: 0.9em
-        background-color: white
+        color: $highlight-font
+        background-color: $overlay-color
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
 
     .img-view
         display: flex
-        flex-direction: row
+        algin-items : center
         margin-block-end: 5vh
-        justify-content: flex-start
 
         img
             inline-size: 3vw
             border-radius: 50%
+            margin-inline-end: 10px
+
         .text
             h4
                 font-size: 1vw
-                margin-block: 0
+                margin: 0
                 font-weight: bold
-                text-align: center
                 margin-inline: 1vw
                 font-family: $Worksans
             h5
-                margin-block: 0
-                font-size: 0.5vw
-                font-weight: bold
-                text-align: center
-                margin-inline: 1vw
+                margin: 0
+                color: rgba(136, 136, 136, 1)
+                font-size: 0.8vw
+                font-weight: normal
                 font-family: $Worksans
-                
-            
-
 
     .feed-view
-        inline-size: 21vw
+        font-size: 1vw
         font-family:  $Roboto
 
