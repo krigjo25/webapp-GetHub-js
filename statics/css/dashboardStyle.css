@@ -1,5 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+/* Card Container Styling */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -7,259 +10,147 @@
   inline-size: 100%;
   flex-direction: row;
   justify-content: space-around;
+  padding: 20px;
+  background-color: #121212; /* Dark theme background */
 }
+
+/* Card Styling */
 .card-container .card {
   cursor: pointer;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 24vw;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
 }
-.card-container .card img {
-  transition: 0.3s;
-  block-size: 100%;
-  inline-size: 100%;
+
+.card-container .card:hover {
+  transform: scale(1.05);
 }
+
 .card-container .card .image-container {
   position: relative;
-  inline-size: 24vw;
+  inline-size: 100%;
+  overflow: hidden;
 }
-.card-container .card .image-container .overlay {
-  top: 0vh;
-  opacity: 0;
-  display: flex;
+
+.card-container .card img {
   block-size: 100%;
   inline-size: 100%;
+  transition: filter 0.3s;
+}
+
+/* Overlay Styling */
+.card-container .card .image-container .overlay {
   position: absolute;
-  color: rgba(238, 140, 43, 0.9);
-  font-family: Halvetica;
+  top: 0;
+  left: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: rgba(40, 40, 40, 0.7);
-}
-.card-container .card .image-container .overlay h2 {
-  font-size: 3vw;
-  font-weight: bold;
-  text-align: center;
+  color: rgba(238, 140, 43, 0.9); 
   font-family: "Work Sans", sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
-.card-container .card .image-container .overlay p {
-  font-size: 1.5vw;
-  font-weight: normal;
-  font-family: "Roboto", sans-serif;
-}
-.card-container .card .image-container .overlay:hover {
-  opacity: 1;
-}
+
 .card-container .card .image-container:hover img {
   filter: blur(0.1em);
 }
-.card-container .card .image-container .overlay {
-  opacity: 0;
-}
-.card-container:hover a {
-  text-decoration: none;
+
+.card-container .card .image-container .overlay:hover {
+  opacity: 1;
 }
 
+.card-container .card .image-container .overlay h2 {
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-container .card .image-container .overlay p {
+  font-size: 1.2vw;
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Card Description */
+.card-container .card .description {
+  padding: 15px;
+  color: rgb(238, 140, 43); /* Orange text */
+}
+
+.card-container .card .description h3 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.card-container .card .description p {
+  font-size: 1vw;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Feedback Container Styling */
 .feedback-container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  align-content: flex-end;
+  padding: 20px;
+  background-color: #121212; /* Dark theme background */
   justify-content: flex-start;
 }
+
 .feedback-container .feedback {
-  padding: 1vw;
-  margin-inline: 1vw;
-  border-radius: 0.9em;
-  background-color: white;
+  background-color: #1e1e1e;
+  color: rgb(238, 140, 43); /* Orange text */
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  width: 20vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: "Roboto", sans-serif;
 }
+
+/* Feedback Image and Text */
 .feedback-container .img-view {
   display: flex;
-  flex-direction: row;
-  margin-block-end: 5vh;
-  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
 }
+
 .feedback-container .img-view img {
   inline-size: 3vw;
   border-radius: 50%;
+  margin-right: 10px;
 }
+
 .feedback-container .img-view .text h4 {
   font-size: 1vw;
-  margin-block: 0;
   font-weight: bold;
-  text-align: center;
-  margin-inline: 1vw;
+  margin: 0;
   font-family: "Work Sans", sans-serif;
 }
+
 .feedback-container .img-view .text h5 {
-  margin-block: 0;
-  font-size: 0.5vw;
-  font-weight: bold;
-  text-align: center;
-  margin-inline: 1vw;
+  font-size: 0.8vw;
+  margin: 0;
+  font-weight: normal;
+  color: #888; /* Light grey for subtitle */
   font-family: "Work Sans", sans-serif;
 }
+
+/* Feedback Comment */
 .feedback-container .feed-view {
-  inline-size: 21vw;
+  font-size: 1vw;
   font-family: "Roboto", sans-serif;
-}/*# sourceMappingURL=dashboardStyle.css.map */
-
-
-/* chorei style */
-
-/* Scoped Styles for Chorei View */
-.chorei-view {
-  color: rgb(238, 140, 43);
-  font-family: Arial, sans-serif;
-}
-
-/* Button Styling */
-.chorei-view button {
-  background-color: #333;
-  color: rgb(239, 149, 59);
-  border: 1px solid rgb(123, 114, 101);
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.chorei-view button:hover {
-  background-color: #444;
-}
-
-/* Input and Textarea Styling */
-.chorei-view input, .chorei-view textarea {
-  background-color: #1e1e1e;
-  color: rgb(238, 140, 43);
-  border: 1px solid #333;
-  padding: 10px;
-  width: 100%;
-  max-width: 600px;
-  margin: 10px 0;
-  border-radius: 5px;
-  resize: vertical;
-}
-
-.chorei-view input::placeholder, .chorei-view textarea::placeholder {
-  color: #888;
-}
-
-/* Section Styling */
-.chorei-view h1, .chorei-view h2 {
-  color: rgb(238, 140, 43);
-  border-bottom: 1px solid #333;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-.chorei-view h1 {
-  font-size: 1.8em;
-  margin-top: 20px;
-}
-
-.chorei-view h2 {
-  font-size: 1.5em;
-  margin-top: 15px;
-}
-
-/* Label Styling */
-.chorei-view label {
-  display: block;
-  font-size: 0.9em;
-  margin-bottom: 5px;
-  color: rgb(238, 140, 43);
-}
-
-/* List Styling */
-.chorei-view ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-
-.chorei-view ul li {
-  margin: 5px 0;
-}
-
-/* Table Styling */
-.chorei-view table {
-  width: 100%;
-  max-width: 800px;
-  border-collapse: collapse;
-  margin-top: 20px;
-  color: rgb(238, 140, 43);
-}
-
-.chorei-view table th, .chorei-view table td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #333;
-}
-
-.chorei-view table th {
-  background-color: #1e1e1e;
-  font-weight: bold;
-}
-
-.chorei-view table tr:hover {
-  background-color: #333;
-}
-
-/* register style */
-
-/* Scoped Styles for Register View */
-.register-view {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  color: rgb(238, 140, 43);
-  font-family: Arial, sans-serif;
-}
-
-.register-view h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: rgb(238, 140, 43);
-}
-
-/* Form Styling */
-.register-view form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 400px;
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.register-view input[type="text"], 
-.register-view input[type="password"] {
-  background-color: #333;
-  color: rgb(238, 140, 43);
-  border: 1px solid #444;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.register-view input[type="submit"] {
-  background-color: rgb(239, 149, 59);
-  color: #121212;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  width: 100%;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.register-view input[type="submit"]:hover {
-  background-color: rgb(238, 140, 43);
+  color: rgb(238, 140, 43); /* Orange text */
 }
