@@ -1,30 +1,42 @@
 // Color varialbes for the dashboard
 $bg-color: rgb(18,18,18, 0.9)
+$overlay-image-color: rgb(40,40,40, 0.7)
 $overlay-color: rgba(30,30,30,1)
-$highlight-font: rgb(238, 140, 43)
+$highlight-font: rgb(238, 140, 43, 1)
+$smooth-highlight-font : rgb(238, 140, 43, 0.9)
 $Roboto: 'Roboto', sans-serif
 $Worksans: 'Work Sans', sans-serif
 
+*
+    box-sizing: border-box
+
 .card-container
+    gap: 20px
     padding: 20px
     display: flex   
     flex-wrap: wrap
-    block-size: 100%
-    inline-size: 100%
-    flex-direction: row
-    justify-content: space-around
-    background: $bg-color
+    justify-content: center
+    background-color: $bg-color
+
+    a
+        text-decoration: none
+        color: inherit
+
+        .card
+            padding-block-end: 16px
 
     .card
-        cursor: pointer
         margin: 10px
+        cursor: pointer
         overflow: hidden
-        inline-size: 24vw
-        border-radius: 8px
-        transition: transform 0.3s
+        inline-size: 22vw
+        border-radius: 12px
         background-color: $overlay-color
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+        transition: transform 0.3s, box-shadow 0.3s
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4) // shadow for the card
 
+        
+        
         img
             block-size: 100%
             inline-size: 100%
@@ -35,38 +47,38 @@ $Worksans: 'Work Sans', sans-serif
             color: $highlight-font
             margin-block-end: 10px
 
-        p
-            font-size: 1vw
-            font-family: $Roboto
-        h3
-            font-size: 1.5vw
-            font-family: $Roboto
-            margin-block-end: 10px
+            h3
+                font-size: 1.3vw
+                font-weight: bold
+                font-family: $Roboto
+                margin-block-end: 5px
 
+            p
+                font-size: 0.9vw
+                color: $smooth-highlight-font
+            
         .image-container
 
             overflow: hidden
-            inline-size: 24vw
+            inline-size: 100%
             position: relative
 
             .overlay
-                top: 0vh
-                left: 0vw
+                top: 0
+                left: 0
                 opacity: 0
                 display: flex
                 block-size: 100%
                 inline-size: 100%
                 position: absolute
                 align-items: center
-                font-family: $Worksans
-                color: $highlight-font
-                font-family: Halvetica
+                font-family: $Roboto
+                color: $smooth-highlight-font
                 flex-direction: column
                 justify-content: center
                 transition: opacity 0.3s
-                background-color: $bg-color
+                background-color: $overlay-image-color
                 
-
                 h2
                     margin: 0
                     font-size: 2vw
@@ -75,76 +87,80 @@ $Worksans: 'Work Sans', sans-serif
                     font-family: $Roboto
 
                 p
-                    font-size: 1.2vw
-                    font-weight: normal
-                    font-family: $Roboto
-                    margin-block-start: 10px
-
-            .overlay:hover
-                opacity: 0.7
+                    font-size: 1vw
+                    text-align: center
+                    margin-block-start: 5px
 
         &:hover
+
+            .image-container
+
+                .overlay
+                    opacity: 1
+                
+                    h2
+                        opacity: 1
+                    p
+                        opacity: 1
             .card
                 transform: scale(1.05)
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5) // Enchance shower on hover
+            
             img
                 filter: blur(0.1em)
 
-            .overlay
-                opacity: 0
-    a
-        text-decoration: none
-        color: inherit
-    
-    &:hover, &:visited
-        a
-            
-            color: inherit
-            text-decoration: none
-    
-
 .feedback-container
+    gap: 15px
+    padding: 20px
     display: flex
     flex-wrap: wrap
     align-content: flex-end
-    justify-content: flex-start
+    justify-content: center
     background-color: $bg-color
 
 
     .feedback
-
         margin: 10px
         padding: 20px
-        inline-size: 20vw
-        border-radius: 0.9em
+        inline-size: 18vw
+        border-radius: 20px
         color: $highlight-font
+        font-family: $Roboto
         background-color: $overlay-color
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+        transition: transform 0.3s, box-shadow 0.3s
+    
+    .feedback:hover
+        transform: scale(1.05)
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5)
 
     .img-view
         display: flex
-        algin-items : center
-        margin-block-end: 5vh
+        align-items : center
+        margin-block-end: 10px
 
         img
+            block-size: 3vw
             inline-size: 3vw
             border-radius: 50%
             margin-inline-end: 10px
 
         .text
+
             h4
-                font-size: 1vw
                 margin: 0
+                font-size: 1vw
                 font-weight: bold
-                margin-inline: 1vw
                 font-family: $Worksans
             h5
                 margin: 0
-                color: rgba(136, 136, 136, 1)
                 font-size: 0.8vw
-                font-weight: normal
+                font-weight: bold
                 font-family: $Worksans
-
+                color: rgba(136, 136, 136, 1)
+    
     .feed-view
         font-size: 1vw
         font-family:  $Roboto
-
+        color: rgba(136,136, 136, 1)
+    
