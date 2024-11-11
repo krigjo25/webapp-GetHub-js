@@ -2,7 +2,8 @@ function searchView()
 {
     document.getElementById('app').innerHTML = /*html*/`
 
-    <h1>Daglig Logg:</h1>
+    <div class="log-view">
+        <h1>Daglig Logg:</h1>
         <div>
             ${navigationMenu()}
         </div>
@@ -29,9 +30,9 @@ function searchView()
                         <td>${entry.teamlog}</td>
                         <td>${entry.moodlog}</td>
                         <td>${entry.codelog}</td>
-                    </tr>
-                `).join('')}
+                    </tr>`).join('')}
             </table>
-        </div>`;
-    
+        </div>
+    </div>`;
+        
 }
