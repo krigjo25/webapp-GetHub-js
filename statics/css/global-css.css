@@ -2,68 +2,109 @@
 @import url('dashboardStyle.css');
 
 
-body {
-    background-color: #121212;
+/* Global Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap");
+
+/* CHOREI VIEW */
+.chorei-view {
     color: rgb(238, 140, 43);
     font-family: Arial, sans-serif;
 }
 
-a {
-    color: rgb(238, 140, 43);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-header, footer {
-    background-color: #1e1e1e;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1, footer p {
-    color: rgb(238, 140, 43);
-}
-
-button {
+.chorei-view button {
     background-color: #333;
     color: rgb(239, 149, 59);
-    border-width: initial;
-    border-style: solid;
-    border-color: rgb(123, 114, 101);
-    justify-content: center;
+    border: 1px solid rgb(123, 114, 101);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-button:hover {
+.chorei-view button:hover {
     background-color: #444;
 }
 
-input, textarea {
+.chorei-view input, .chorei-view textarea {
     background-color: #1e1e1e;
     color: rgb(238, 140, 43);
     border: 1px solid #333;
     padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0;
+    border-radius: 5px;
+    resize: vertical;
 }
 
-input::placeholder, textarea::placeholder {
+.chorei-view input::placeholder, .chorei-view textarea::placeholder {
     color: #888;
 }
 
-.logo {
+.chorei-view h1, .chorei-view h2 {
+    color: rgb(238, 140, 43);
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.chorei-view h1 {
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+.chorei-view h2 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.chorei-view label {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 5px;
     color: rgb(238, 140, 43);
 }
 
-/* Chorei View */
+.chorei-view ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
 
-/* Scoped Styles for Log View */
+.chorei-view ul li {
+    margin: 5px 0;
+}
+
+.chorei-view table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: rgb(238, 140, 43);
+}
+
+.chorei-view table th, .chorei-view table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.chorei-view table th {
+    background-color: #1e1e1e;
+    font-weight: bold;
+}
+
+.chorei-view table tr:hover {
+    background-color: #333;
+}
+
+/* LOG VIEW */
 .log-view {
     color: rgb(238, 140, 43);
     font-family: Arial, sans-serif;
 }
 
-/* Header Styling */
 .log-view h1, .log-view h2 {
     color: rgb(238, 140, 43);
     border-bottom: 1px solid #333;
@@ -81,7 +122,6 @@ input::placeholder, textarea::placeholder {
     margin-top: 15px;
 }
 
-/* Button Styling */
 .log-view button {
     background-color: #333;
     color: rgb(239, 149, 59);
@@ -98,7 +138,6 @@ input::placeholder, textarea::placeholder {
     background-color: #444;
 }
 
-/* Input Styling */
 .log-view input[type="text"] {
     background-color: #1e1e1e;
     color: rgb(238, 140, 43);
@@ -110,7 +149,6 @@ input::placeholder, textarea::placeholder {
     border-radius: 5px;
 }
 
-/* Table Styling */
 .log-view table {
     width: 100%;
     max-width: 800px;
@@ -134,9 +172,7 @@ input::placeholder, textarea::placeholder {
     background-color: #333;
 }
 
-/* log-view.css */
-
-/* Scoped Styles for Login View */
+/* LOGIN VIEW */
 .login-view {
     display: flex;
     flex-direction: column;
@@ -153,7 +189,6 @@ input::placeholder, textarea::placeholder {
     color: rgb(238, 140, 43);
 }
 
-/* Form Styling */
 .login-view form {
     display: flex;
     flex-direction: column;
@@ -194,7 +229,6 @@ input::placeholder, textarea::placeholder {
     background-color: rgb(238, 140, 43);
 }
 
-/* Register Button Styling */
 .login-view button {
     background-color: #333;
     color: rgb(239, 149, 59);
@@ -209,4 +243,61 @@ input::placeholder, textarea::placeholder {
 
 .login-view button:hover {
     background-color: #444;
+}
+
+/* REGISTER VIEW */
+.register-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: rgb(238, 140, 43);
+    font-family: Arial, sans-serif;
+}
+
+.register-view h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(238, 140, 43);
+}
+
+.register-view form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.register-view input[type="text"], 
+.register-view input[type="password"] {
+    background-color: #333;
+    color: rgb(238, 140, 43);
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.register-view input[type="submit"] {
+    background-color: rgb(239, 149, 59);
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-view input[type="submit"]:hover {
+    background-color: rgb(238, 140, 43);
 }
