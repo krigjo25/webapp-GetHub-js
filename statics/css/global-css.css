@@ -3,23 +3,23 @@
 
 
 /* Global Font Import */
-@import url("https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* App-wide background color */
 body {
     background-color: #121212; /* Dark background for the whole app */
     color: rgb(238, 140, 43); /* Orange text as a default */
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
 /* CHOREI VIEW */
 .chorei-view {
     color: rgb(238, 140, 43);
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .chorei-view button {
@@ -113,7 +113,7 @@ body {
 /* LOG VIEW */
 .log-view {
     color: rgb(238, 140, 43);
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .log-view h1, .log-view h2 {
@@ -264,7 +264,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     color: rgb(238, 140, 43);
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .register-view h1 {
