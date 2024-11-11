@@ -107,7 +107,7 @@ h1 {
 
 .card-container .card .description p {
   font-size: 0.9vw;
-  color: #ccc; /* Lightened text color for readability */
+  color: rgb(238, 140, 43); /* Lightened text color for readability */
 }
 
 /* Feedback Container Styling */
@@ -166,5 +166,5 @@ h1 {
 /* Feedback Comment */
 .feedback-container .feed-view {
   font-size: 1vw;
-  color: #ddd;
+  color: rgb(238, 140, 43);
 }
