@@ -1,6 +1,7 @@
 function logView() {
     console.log('logView is being called');
     const html = /*HTML*/`
+        <div class="log-view">
         <h1>Daglig Logg:</h1>
         <div>
             ${navigationMenu()}

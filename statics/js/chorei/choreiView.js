@@ -1,6 +1,7 @@
 function choreiView() {
     console.log('choreiView is being called');
     const html = /*HTML*/`
+    <div class="chorei-view">
         <h1>Chorei område:</h1>
         <div>
             <button onclick="navigateToChoreiView('chorei')">Chorei</button>

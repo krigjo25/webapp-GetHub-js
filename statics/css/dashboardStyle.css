@@ -100,3 +100,106 @@
   inline-size: 21vw;
   font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=dashboardStyle.css.map */
+
+
+/* chorei style */
+
+/* Scoped Styles for Chorei View */
+.chorei-view {
+  color: rgb(238, 140, 43);
+  font-family: Arial, sans-serif;
+}
+
+/* Button Styling */
+.chorei-view button {
+  background-color: #333;
+  color: rgb(239, 149, 59);
+  border: 1px solid rgb(123, 114, 101);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.chorei-view button:hover {
+  background-color: #444;
+}
+
+/* Input and Textarea Styling */
+.chorei-view input, .chorei-view textarea {
+  background-color: #1e1e1e;
+  color: rgb(238, 140, 43);
+  border: 1px solid #333;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 0;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.chorei-view input::placeholder, .chorei-view textarea::placeholder {
+  color: #888;
+}
+
+/* Section Styling */
+.chorei-view h1, .chorei-view h2 {
+  color: rgb(238, 140, 43);
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.chorei-view h1 {
+  font-size: 1.8em;
+  margin-top: 20px;
+}
+
+.chorei-view h2 {
+  font-size: 1.5em;
+  margin-top: 15px;
+}
+
+/* Label Styling */
+.chorei-view label {
+  display: block;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  color: rgb(238, 140, 43);
+}
+
+/* List Styling */
+.chorei-view ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.chorei-view ul li {
+  margin: 5px 0;
+}
+
+/* Table Styling */
+.chorei-view table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: rgb(238, 140, 43);
+}
+
+.chorei-view table th, .chorei-view table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.chorei-view table th {
+  background-color: #1e1e1e;
+  font-weight: bold;
+}
+
+.chorei-view table tr:hover {
+  background-color: #333;
+}

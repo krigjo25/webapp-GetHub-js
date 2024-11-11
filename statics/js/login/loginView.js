@@ -1,5 +1,6 @@
 function loginView() {
     const html = /*HTML*/`
+        <div class="login-view">
         <h1>Login</h1>
         <form onsubmit='loginHandler(event)'>
             <input type="text" name="username" placeholder="Username" oninput='model.input.login.username = this.value'>
