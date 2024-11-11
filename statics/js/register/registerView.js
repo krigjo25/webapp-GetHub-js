@@ -3,6 +3,7 @@
 
 function registerView() {
     let html = /*HTML*/`
+        <div class="register-view">
         <h1>Register</h1>
         <form onsubmit='pushObject(event)'>
             <input type="text" name="Name" placeholder="e.g John Doe" oninput='model.input.registration.name = this.value'>
