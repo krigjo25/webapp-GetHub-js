@@ -4,7 +4,7 @@ function dashboardView()
     let user = model.data.users;
     for (let i = 0; i < user.length; i++)
         {
-            if (user[i].id == model.session.id)
+            if (user[i].id== model.session.id)
             {
                 user = user[i].username;
                 break;
@@ -29,16 +29,16 @@ function dashmain()
         {
             //  Creating an HTML Card
             html += /*HTML*/`
-            <a href="${course[i].link}">
-                <div class="card">
-                    <div class ="image-container">
+            <a href='${course[i].link}'>
+                <div class='card'>
+                    <div class='image-container'>
                         <img src="${course[i].img}" alt="${course[i].alt}">
                         <div class='overlay'>
                            <h2>${course[i].name}</h2>
                             <p>${course[i].description}</p>
                         </div>
                     </div>
-                    <div class ='description'>
+                    <div class='description'>
                         <h3>${course[i].name}</h3>
                         <p>${course[i].description}</p>
                     </div>
@@ -49,15 +49,15 @@ function dashmain()
         {
             //  Creating an HTML Card
             html += /*HTML*/`
-                    <div class="card" onclick="navigateView('${course[i].name}')"> 
-                        <div class ="image-container">
+                    <div class='card' onclick="navigateView('${course[i].name}')"> 
+                        <div class='image-container'>
                             <img src="${course[i].img}" alt="${course[i].alt}">
                             <div class='overlay'>
                             <h2>${course[i].name}</h2>
                             <p>${course[i].description}</p>
                         </div>
                         </div>
-                        <div class ='description'>
+                        <div class='description'>
                             <h3>${course[i].name}</h3>
                             <p>${course[i].description}</p>
                         </div>
@@ -80,7 +80,7 @@ function feedbackView()
     for (let i = 0; i < users.length; i++)
     {
         //  Ensure that the user matches with the logged inn user
-        if (users[i].id == model.session.id)
+        if (users[i].id== model.session.id)
         {
             //  Initialize feedbacks for given user
             let feedbacks = model.data.users[i].feedbacks;
@@ -92,7 +92,7 @@ function feedbackView()
 
                     html += /*HTML*/`
                         <div class='feedback'>
-                            <div class="img-view">
+                            <div class='img-view'>
                                 <img src="statics/img/dummy_teacher_profile_image.png" alt="teacher.jpg">
                                 <div class='text'>
                                     <h4>${teacher.name}</h4>
