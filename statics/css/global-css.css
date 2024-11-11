@@ -5,6 +5,17 @@
 /* Global Font Import */
 @import url("https://fonts.googleapis.com/css2?family=Arial:wght@400&display=swap");
 
+
+/* App-wide background color */
+body {
+    background-color: #121212; /* Dark background for the whole app */
+    color: rgb(238, 140, 43); /* Orange text as a default */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 /* CHOREI VIEW */
 .chorei-view {
     color: rgb(238, 140, 43);
