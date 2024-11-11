@@ -1,0 +1,212 @@
+/* Importing other styles*/
+@import url('dashboardStyle.css');
+
+
+body {
+    background-color: #121212;
+    color: rgb(238, 140, 43);
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: rgb(238, 140, 43);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header, footer {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1, footer p {
+    color: rgb(238, 140, 43);
+}
+
+button {
+    background-color: #333;
+    color: rgb(239, 149, 59);
+    border-width: initial;
+    border-style: solid;
+    border-color: rgb(123, 114, 101);
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+input, textarea {
+    background-color: #1e1e1e;
+    color: rgb(238, 140, 43);
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #888;
+}
+
+.logo {
+    color: rgb(238, 140, 43);
+}
+
+/* Chorei View */
+
+/* Scoped Styles for Log View */
+.log-view {
+    color: rgb(238, 140, 43);
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.log-view h1, .log-view h2 {
+    color: rgb(238, 140, 43);
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.log-view h1 {
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+.log-view h2 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+/* Button Styling */
+.log-view button {
+    background-color: #333;
+    color: rgb(239, 149, 59);
+    border: 1px solid rgb(123, 114, 101);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.log-view button:hover {
+    background-color: #444;
+}
+
+/* Input Styling */
+.log-view input[type="text"] {
+    background-color: #1e1e1e;
+    color: rgb(238, 140, 43);
+    border: 1px solid #333;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Table Styling */
+.log-view table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: rgb(238, 140, 43);
+}
+
+.log-view table th, .log-view table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.log-view table th {
+    background-color: #1e1e1e;
+    font-weight: bold;
+}
+
+.log-view table tr:hover {
+    background-color: #333;
+}
+
+/* log-view.css */
+
+/* Scoped Styles for Login View */
+.login-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: rgb(238, 140, 43);
+    font-family: Arial, sans-serif;
+}
+
+.login-view h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(238, 140, 43);
+}
+
+/* Form Styling */
+.login-view form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-view input[type="text"], 
+.login-view input[type="password"] {
+    background-color: #333;
+    color: rgb(238, 140, 43);
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-view input[type="submit"] {
+    background-color: rgb(239, 149, 59);
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-view input[type="submit"]:hover {
+    background-color: rgb(238, 140, 43);
+}
+
+/* Register Button Styling */
+.login-view button {
+    background-color: #333;
+    color: rgb(239, 149, 59);
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-view button:hover {
+    background-color: #444;
+}
