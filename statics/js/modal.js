@@ -96,7 +96,7 @@ const model = {
                 name:"chorei",
                 img:"statics/img/chorei.png",
                 alt:"Chorei",
-                description:"NøkkelKompetanse, skriv log, se gamle chorei og relaterte oppgaver",
+                description:"Økt selvbevisthet, skriv en Journal, se gamle chorei undervisning og relaterte oppgaver",
                 assignments: 100,
             },
             {
@@ -105,7 +105,7 @@ const model = {
                 img:"statics/img/moodle.png",
                 alt:"Moodle",
                 link:"https://getacademy.moodlecloud.com/",
-                description:"Progammerings oppgaver "
+                description:" Oppgaver relatert til pensum",
 
             },
             {
@@ -113,7 +113,7 @@ const model = {
                 name:"journal",
                 img:"statics/img/student-log.png",
                 alt:"Student-journal",
-                description:'Se hva du har lært, og jobbet med tidligere'
+                description:'Les gjennom prograsjonen din gjennom studiet.'
 
             },
             /*{
