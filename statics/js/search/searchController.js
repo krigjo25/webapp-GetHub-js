@@ -42,22 +42,22 @@ function filterPeople(search, id) {
       // 2D linear algorithm
       for (let j = 0; j < logs.length; j++) {
         // Ensure that logs include the searched item in a case-insensitive way
-        if (logs[j].date.toLowerCase().includes(search)) {
+        if (logs[j].date.includes(search)) {
           filteredLogs.push(logs[j]);
         }
-        else if (logs[j].title.toLowerCase().includes(search)) {
+        else if (logs[j].title.includes(search)) {
           filteredLogs.push(logs[j]);
         }
-        else if (logs[j].nklog.toLowerCase().includes(search)) {
+        else if (logs[j].nklog.includes(search)) {
           filteredLogs.push(logs[j]);
         }
-        else if (logs[j].teamlog.toLowerCase().includes(search)) {
+        else if (logs[j].teamlog.includes(search)) {
           filteredLogs.push(logs[j]);
         }
-        else if (logs[j].moodlog.toLowerCase().includes(search)) {
+        else if (logs[j].moodlog.includes(search)) {
           filteredLogs.push(logs[j]);
         }
-        else if (logs[j].codelog.toLowerCase().includes(search)) {
+        else if (logs[j].codelog.includes(search)) {
           filteredLogs.push(logs[j]);
         }
       }
