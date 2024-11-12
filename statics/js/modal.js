@@ -96,7 +96,7 @@ const model = {
                 name:"chorei",
                 img:"statics/img/chorei.png",
                 alt:"Chorei",
-                description:"Økt selvbevisthet, skriv en Journal, se gamle chorei undervisning og relaterte oppgaver",
+                description:"Profesjonell vekst, skriv i Journal, se gamle chorei undervisning og relaterte oppgaver",
                 assignments: 100,
             },
             {
