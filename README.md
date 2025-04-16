@@ -1,4 +1,4 @@
-#   Daglig logg
+#   StudentLog
 
 #  Linker til prosjektet
 
