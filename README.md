@@ -1,4 +1,4 @@
-#   StudentLog
+#   GetHub
 
 #  Linker til prosjektet
 
